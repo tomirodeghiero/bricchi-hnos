@@ -39,7 +39,7 @@ const Footer = () => {
             <ul className="space-y-4 text-gray-800 font-open-sans text-[0.9rem]">
               <li><Link href="#" className="hover:text-gray-800">Inicio</Link></li>
               <li><Link href="#" className="hover:text-gray-800">Empresa</Link></li>
-              <li><Link href="#" className="hover:text-gray-800">Productos</Link></li>
+              <li><Link href="/shop" className="hover:text-gray-800">Productos</Link></li>
               <li><Link href="/categories" className="hover:text-gray-800">Categorías</Link></li>
               <li><Link href="#" className="hover:text-gray-800">Servicios</Link></li>
               <li><Link href="#" className="hover:text-gray-800">Contacto</Link></li>
