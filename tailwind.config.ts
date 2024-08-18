@@ -1,6 +1,5 @@
-import type { Config } from "tailwindcss";
-
-const config: Config = {
+/** @type {import('tailwindcss').Config} */
+module.exports = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -8,13 +7,56 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      colors: {
+        orange: {
+          100: "#FAF3EA",
+          200: "#FCF8F3",
+        },
+        green: {
+          400: "#7EB693",
+          700: "#28b63e",
+          900: "#274C5B",
+        },
+        stone: {
+          300: "#4D5053",
+          500: "#3A3A3A",
+          700: "#333333",
+        },
+        gray: {
+          100: "#FAFAFA",
+          200: "#F4F5F7",
+          300: "#EEEEEE",
+          400: "#D4D4D4",
+          500: "#9F9F9F",
+          600: "#898989",
+          700: "#707070",
+          800: "#525C60",
+          900: "#292F36"
+        },
+        yellow: {
+          400: "#ffca0a",
+          600: "#B88E2F",
+        },
+        rose: {
+          300: "#F9F1E7",
+        },
+        slate: {
+          800: "#2a3243",
+        },
+        red: {
+          500: "#E62128",
+        }
+      },
+      width: {
+        custom: "100vw",
+      },
+      height: {
+        custom: "7.5rem",
+      },
+      borderRadius: {
+        custom: "50%",
       },
     },
   },
   plugins: [],
 };
-export default config;
