@@ -29,3 +29,5 @@ export const MODO = "/assets/icons/modo.png";
 export const SPARE_PARTS = "/assets/icons/spare-parts.png";
 export const TRACTOR = "/assets/icons/tractor.png";
 export const CIRCLE = "/assets/icons/circle.png";
+export const STANDARD = "/assets/icons/standard.svg";
+export const QUALITY = "/assets/icons/quality.svg";

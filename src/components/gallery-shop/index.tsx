@@ -6,7 +6,7 @@ import { formatPriceARS } from '@/utils/functions/functions';
 import Link from 'next/link';
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 
-const STATIC_PRODUCTS = [
+export const STATIC_PRODUCTS = [
     {
         id: 1,
         src: '/assets/shop/01.png',
@@ -81,7 +81,7 @@ const GalleryItemPlaceholder = () => (
 );
 
 
-const GalleryItem = ({ src, title, id, category }: any) => {
+export const GalleryItem = ({ src, title, id, category }: any) => {
     const imageHeight = 'h-72 lg:h-96';
     return (
         <Link className="w-full flex flex-col rounded-lg p-2 -sm hover:shadow-lg transition-shadow duration-200" href={`/shop/${id}`}>
