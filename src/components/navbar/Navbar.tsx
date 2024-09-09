@@ -188,7 +188,7 @@ export default function Navbar() {
           <Link href="/" className="navlink">
             Inicio
           </Link>
-          <Link href="/" className="navlink">
+          <Link href="/about" className="navlink">
             Empresa
           </Link>
           <Link href="/shop" className="navlink">

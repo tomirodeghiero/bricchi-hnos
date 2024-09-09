@@ -26,3 +26,6 @@ export const HOME = "/assets/icons/home.png";
 export const DROP_RIGHT = "/assets/icons/drop-right.svg";
 export const EMPTY_CART = "/assets/icons/empty-cart.svg";
 export const MODO = "/assets/icons/modo.png";
+export const SPARE_PARTS = "/assets/icons/spare-parts.png";
+export const TRACTOR = "/assets/icons/tractor.png";
+export const CIRCLE = "/assets/icons/circle.png";
