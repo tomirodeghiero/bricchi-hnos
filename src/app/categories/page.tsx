@@ -44,7 +44,7 @@ const Categories = () => {
         title="Descúbrenos"
         subtitle="Inicio - Categorías"
       />
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-5xl mx-auto" data-os="fade-up">
         <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 md:gap-4">
           {categories.map((category, index) => (
             <div key={index} className="flex flex-col px-2 mt-5 md:mt-0">

@@ -103,30 +103,26 @@ export default function Home() {
 
         <div
           className="relative flex flex-col items-start justify-center h-[77.5vh] sm:h-[60vh] md:h-[70vh] lg:h-[77.5vh] px-8 py-12 text-white sm:px-16 md:px-24 lg:px-32"
-          data-aos="fade-right"
+          data-aos="fade-up"
         >
           <h1
             className="text-lg font-bold font-livvic bg-stone-500 px-3 py-1 rounded-md shadow"
-            data-aos="fade-up"
           >
             Maquinaria & Equipamiento
           </h1>
           <h2
             className="mt-2 text-4xl font-bold text-yellow-300 sm:text-5xl md:text-6xl font-livvic"
-            data-aos="fade-right"
           >
             Producción Agrícola
           </h2>
           <h2
             className="mt-1 text-4xl font-bold sm:text-5xl md:text-6xl font-livvic"
-            data-aos="fade-left"
           >
             De calidad
           </h2>
           <Link href="/about">
             <button
               className="bg-yellow-300 hover:border-yellow-600 shadow-2xl text-stone-900 my-8 font-livvic border uppercase border-yellow-300 font-medium focus:outline-none focus:ring-1 focus:ring-green-600 focus:ring-opacity-50 transition duration-300 ease-in-out transform hover:shadow-md hover:-translate-y-1 rounded-lg px-6 py-3 flex items-center"
-              data-aos="fade-up"
             >
               Descubre Más
               <img src={GO_TO_SHOP} alt="Ir a la Tienda" className="w-5 h-5 ml-2" />
@@ -165,7 +161,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="px-4 py-12 lg:px-0 bg-gray-200" data-aos="fade-up">
+      <div className="px-4 py-12 lg:px-0 bg-gray-200">
         <div className="max-w-6xl flex flex-col-reverse lg:flex-row flex-wrap mx-auto gap-8">
           <div
             className="w-full h-full flex-1"
@@ -196,7 +192,7 @@ export default function Home() {
             </p>
 
             <div className="space-y-8">
-              <div className="flex items-start gap-4" data-aos="zoom-in">
+              <div className="flex items-start gap-4">
                 <div className="bg-white p-4 w-28 rounded-lg">
                   <img src={QUALITY} alt="Repuestos de Calidad" className="w-12 h-12" />
                 </div>
@@ -208,7 +204,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="flex items-start gap-4" data-aos="zoom-in" data-aos-delay="200">
+              <div className="flex items-start gap-4" data-aos-delay="200">
                 <div className="bg-white p-4 w-28 rounded-lg">
                   <img src={STANDARD} alt="Estándares de Calidad" className="w-12 h-12" />
                 </div>
@@ -224,7 +220,6 @@ export default function Home() {
             <Link href="/shop">
               <button
                 className="bg-green-900 my-8 hover:bg-white border border-green-900 font-medium focus:outline-none focus:ring-1 focus:ring-green-600 focus:ring-opacity-50 transition duration-300 ease-in-out transform hover:shadow-md hover:-translate-y-1 rounded-xl text-white hover:text-green-900 px-6 py-3 flex items-center"
-                data-aos="fade-up"
               >
                 Ir a la Tienda
                 <img src={GO_TO_SHOP} alt="Ir a la Tienda" className="w-5 h-5 ml-2" />
@@ -236,11 +231,11 @@ export default function Home() {
 
 
       <div className="flex flex-col items-center my-10 justify-center max-w-5xl mx-auto" data-aos="fade-up">
-        <h2 className="font-yellowtail text-green-400 text-2xl font-medium mb-1" data-aos="zoom-in">
+        <h2 className="font-yellowtail text-green-400 text-2xl font-medium mb-1">
           Maquinaria de Calidad
         </h2>
 
-        <h3 className="text-3xl font-semibold text-green-900" data-aos="fade-up">
+        <h3 className="text-3xl font-semibold text-green-900">
           Nuestros Productos
         </h3>
 
@@ -295,14 +290,14 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="bg-green-900 py-14" data-aos="fade-up">
+      <div className="bg-green-900 py-14">
         <div className="max-w-5xl mx-auto px-4 lg:px-0">
           <div className="w-full flex flex-col md:flex-row justify-between items-center relative">
             <div className="flex flex-col">
-              <h2 className="font-yellowtail text-green-400 text-2xl font-medium text-left mb-1" data-aos="fade-right">
+              <h2 className="font-yellowtail text-green-400 text-2xl font-medium text-left mb-1">
                 Ofertas
               </h2>
-              <h3 className="text-3xl font-semibold text-left text-white" data-aos="fade-right">
+              <h3 className="text-3xl font-semibold text-left text-white">
                 Te Ofrecemos Maquinaria de Calidad <br />
                 & Al Mejor Precio
               </h3>
@@ -311,7 +306,6 @@ export default function Home() {
             <Link href="/about">
               <button
                 className="bg-yellow-300 right-0 bottom-0 mt-5 md:mt-0 md:absolute text-stone-900 font-livvic border border-yellow-300 font-medium focus:outline-none focus:ring-1 focus:ring-green-600 focus:ring-opacity-50 transition duration-300 ease-in-out transform hover:shadow-md hover:-translate-y-1 rounded-lg px-6 py-3 flex items-center"
-                data-aos="fade-left"
               >
                 Ver Más Productos
                 <img src={GO_TO_SHOP} alt="Ir a la Tienda" className="w-5 h-5 ml-2" />
@@ -319,10 +313,10 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="max-w-5xl mx-auto mt-8 bg-green-900" data-aos="fade-up">
+          <div className="max-w-5xl mx-auto mt-8 bg-green-900">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {productsOnOffer.map((product, index: number) => (
-                <div key={index} className="flex flex-col rounded-b-2xl" data-aos="zoom-in" data-aos-delay={`${index * 100}`}>
+                <div key={index} className="flex flex-col rounded-b-2xl" data-aos="fade-up" data-aos-delay={`${index * 100}`}>
                   <div className="w-full overflow-hidden rounded-[1.5rem]">
                     <img
                       src={product.image}
@@ -340,9 +334,9 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="relative bg-white h-[36rem] flex items-center" data-aos="fade-up">
+      <div className="relative bg-white h-[36rem] flex items-center">
         <div className="relative w-full h-[36rem] flex items-center">
-          <div className="absolute inset-y-0 left-0 w-full lg:w-1/2 h-full" data-aos="fade-right">
+          <div className="absolute inset-y-0 left-0 w-full lg:w-1/2 h-full">
             <img
               src={CAMP}
               alt="Paisaje agrícola"
@@ -352,10 +346,10 @@ export default function Home() {
 
           <div className="relative z-10 ml-auto bg-white p-10 w-full lg:w-1/2 h-[28rem] rounded-lg md:rounded-l-3xl md:mr-12 flex items-center" data-aos="fade-left">
             <div>
-              <h2 className="font-yellowtail text-green-400 text-2xl font-medium text-left mb-1">
+              <h2 data-aos="fade-up" className="font-yellowtail text-green-400 text-2xl font-medium text-left mb-1">
                 Amigable con el Agro
               </h2>
-              <h3 className="text-3xl font-semibold text-left text-green-900 mt-1">
+              <h3 data-aos="fade-up" className="text-3xl font-semibold text-left text-green-900 mt-1">
                 Bricchi Hnos. Es Tu Amigo <br /> En Maquinaria Agrícola
               </h3>
 
@@ -384,10 +378,10 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="w-full py-20 bg-green-100" data-aos="fade-up">
+      <div className="w-full py-20 bg-green-100">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 w-full">
           {categories.map((category) => (
-            <div key={category.title} className="relative" data-aos="zoom-in">
+            <div key={category.title} className="relative">
               <img
                 src={category.image}
                 alt={category.title}
@@ -404,7 +398,6 @@ export default function Home() {
           ))}
         </div>
       </div>
-
     </main>
   );
 }

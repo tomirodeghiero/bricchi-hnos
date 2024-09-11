@@ -88,7 +88,7 @@ const About = () => {
             </div>
 
             <Link href="/shop">
-              <button className="bg-green-900 mx-auto md:mx-0 my-8 hover:bg-white border border-green-900 font-medium focus:outline-none focus:ring-1 focus:ring-green-600 focus:ring-opacity-50 transition duration-300 ease-in-out transform hover:shadow-md hover:-translate-y-1 rounded-2xl text-white hover:text-green-900 px-6 py-3 flex items-center" data-aos="fade-up">
+              <button className="bg-green-900 mx-auto md:mx-0 my-8 hover:bg-white border border-green-900 font-medium focus:outline-none focus:ring-1 focus:ring-green-600 focus:ring-opacity-50 transition duration-300 ease-in-out transform hover:shadow-md hover:-translate-y-1 rounded-2xl text-white hover:text-green-900 px-6 py-3 flex items-center">
                 Explorar más en la Tienda
                 <img src={GO_TO_SHOP} alt="Ir a la Tienda" className="w-5 h-5 ml-2" />
               </button>
@@ -96,9 +96,8 @@ const About = () => {
           </div>
         </div>
 
-
         <div className="flex  mx-auto bg-gray-200">
-          <div className="flex mx-auto gap-20 py-10">
+          <div className="flex mx-auto gap-20 py-10" data-os="fade-up">
             <div className="flex flex-col md:flex-row mx-auto gap-2 md:gap-20 max-w-5xl">
               <div className="w-full md:w-1/2 px-4 lg:px-0">
                 <h1 className="font-yellowtail text-green-400 text-2xl font-medium mb-1">
@@ -175,7 +174,7 @@ const About = () => {
           </div>
         </div>
 
-        <div className="bg-green-900 py-10" data-aos="fade-up">
+        <div className="bg-green-900 py-10">
           <div className="max-w-5xl mx-auto px-4 lg:px-0">
             <h2 className="font-yellowtail text-green-400 text-2xl font-medium text-center mb-1">
               Acerca de Nosotros
@@ -184,9 +183,9 @@ const About = () => {
               Lo Que Ofrecemos Para Su Empresa
             </h3>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-5" data-aos="fade-up">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-5">
               {services.map((service, index) => (
-                <div key={index} className="flex flex-col rounded-b-2xl" data-aos="zoom-in">
+                <div key={index} className="flex flex-col rounded-b-2xl" data-aos="zoom-up">
                   <div className="w-full overflow-hidden rounded-[1.5rem]">
                     <img
                       src={service.image}
