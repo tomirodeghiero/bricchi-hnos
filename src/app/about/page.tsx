@@ -47,7 +47,6 @@ const About = () => {
     },
   ];
 
-
   return (
     <div>
       <HeaderBackground

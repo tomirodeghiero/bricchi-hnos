@@ -6,7 +6,7 @@ import { PHONE_NUMBER } from "@/utils/constants/constants";
 
 const WhatsApp = () => {
   const message =
-    "Hola, estoy interesado en un producto genial iluminación. ¿Podrían darme más información?";
+    "Hola, estoy interesado en conocer más sobre la maquinaria agrícola que ofrecen en Bricchi Hnos. ¿Podrían brindarme más información sobre los productos disponibles y sus precios? Gracias!";
 
   const handleClick = () => {
     window.open(
