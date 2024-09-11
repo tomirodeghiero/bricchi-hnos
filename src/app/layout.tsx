@@ -8,6 +8,7 @@ import Footer from "@/components/footer/Footer";
 import WhatsApp from "@/components/whatsapp/Whatsapp";
 
 import { CartProvider } from "@/context/CartContext";
+import { AOSInit } from "../../aos";
 
 export const metadata: Metadata = {
   title: "Bricchi Hnos. S.A.",
@@ -21,6 +22,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <AOSInit />
       <body>
         <CartProvider>
           <Navbar />

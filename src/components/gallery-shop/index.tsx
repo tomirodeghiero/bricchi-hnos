@@ -340,7 +340,7 @@ const GalleryShop = () => {
             {/* {renderSubcategoryTabs()} */}
             {STATIC_PRODUCTS.length > 0 ?
                 <div className="mx-auto max-w-6xl py-4 px-2">
-                    <div className="grid grid-cols-4 gap-2 mt-4">
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4">
                         {STATIC_PRODUCTS.map((lamp: any, index) => (
                             <GalleryItem key={index} {...lamp} />
                         ))}

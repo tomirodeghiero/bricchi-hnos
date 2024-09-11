@@ -136,7 +136,21 @@ export default function Navbar() {
                 >
                   <div className="flex gap-4">
                     <img className="h-6 cursor-pointer" src={HOME} alt="Home" />
-                    <h2 className="text-xl">Home</h2>
+                    <h2 className="text-xl">Inicio</h2>
+                  </div>
+                  <img
+                    className="h-4 cursor-pointer"
+                    src={DROP_RIGHT}
+                    alt="Drop right"
+                  />
+                </div>
+                <div
+                  className="flex justify-between border-b border-gray-400 py-7 items-center"
+                  onClick={(event) => handleLinkClick(event, "/about")}
+                >
+                  <div className="flex gap-4">
+                    <img className="h-6 cursor-pointer" src={HOME} alt="Home" />
+                    <h2 className="text-xl">Empresa</h2>
                   </div>
                   <img
                     className="h-4 cursor-pointer"
@@ -154,7 +168,49 @@ export default function Navbar() {
                       src={SHOPPING_CART}
                       alt="Shopping"
                     />
-                    <h2 className="text-xl">Tienda</h2>
+                    <h2 className="text-xl">Productos</h2>
+                  </div>
+                  <img
+                    className="h-4 cursor-pointer"
+                    src={DROP_RIGHT}
+                    alt="Drop right"
+                  />
+                </div>
+                <div
+                  className="flex justify-between border-b border-gray-400 py-7 items-center"
+                  onClick={(event) => handleLinkClick(event, "/categories")}
+                >
+                  <div className="flex gap-4">
+                    <img className="h-6 cursor-pointer" src={HOME} alt="Home" />
+                    <h2 className="text-xl">Categorías</h2>
+                  </div>
+                  <img
+                    className="h-4 cursor-pointer"
+                    src={DROP_RIGHT}
+                    alt="Drop right"
+                  />
+                </div>
+                <div
+                  className="flex justify-between border-b border-gray-400 py-7 items-center"
+                  onClick={(event) => handleLinkClick(event, "/services")}
+                >
+                  <div className="flex gap-4">
+                    <img className="h-6 cursor-pointer" src={HOME} alt="Home" />
+                    <h2 className="text-xl">Servicio</h2>
+                  </div>
+                  <img
+                    className="h-4 cursor-pointer"
+                    src={DROP_RIGHT}
+                    alt="Drop right"
+                  />
+                </div>
+                <div
+                  className="flex justify-between border-b border-gray-400 py-7 items-center"
+                  onClick={(event) => handleLinkClick(event, "/contact")}
+                >
+                  <div className="flex gap-4">
+                    <img className="h-6 cursor-pointer" src={HOME} alt="Home" />
+                    <h2 className="text-xl">Contacto</h2>
                   </div>
                   <img
                     className="h-4 cursor-pointer"

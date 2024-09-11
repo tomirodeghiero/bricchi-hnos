@@ -10,3 +10,8 @@ export const STATISTICS = [
   { image: "/assets/home/stat-03.png", },
   { image: "/assets/home/stat-04.png", }
 ];
+export const COMPANIES = [
+  { image: "/assets/home/praba.png", },
+  { image: "/assets/home/hanomag.png", },
+  { image: "/assets/home/fertec.png", },
+];

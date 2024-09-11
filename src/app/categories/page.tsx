@@ -45,10 +45,10 @@ const Categories = () => {
         subtitle="Inicio - Categorías"
       />
       <div className="max-w-5xl mx-auto">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 md:gap-4">
           {categories.map((category, index) => (
-            <div key={index} className="flex flex-col">
-              <div className="w-full h-80 overflow-hidden rounded-2xl">
+            <div key={index} className="flex flex-col px-2 mt-5 md:mt-0">
+              <div className="w-full h-60 md:h-80 overflow-hidden rounded-lg md:rounded-2xl">
                 <img
                   src={category.image}
                   alt={category.title}

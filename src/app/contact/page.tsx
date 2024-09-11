@@ -1,6 +1,5 @@
 "use client";
 
-import SendButton from '@/components/buttons/SendButton';
 import HeaderBackground from '@/components/header-background/HeaderBackground';
 import TextInput from '@/components/text-input/TextInput';
 import { CONTACT, CONTACT_BACKGROUND } from '@/utils/assets/contact/contact';
@@ -37,7 +36,7 @@ const ContactPage = () => {
               Estamos aquí para ofrecerte las mejores soluciones en maquinaria agrícola y repuestos. Contáctanos para más información y asistencia personalizada.
             </p>
 
-            <div className="flex-col mt-6 space-y-4 w-3/4">
+            <div className="flex-col mt-6 space-y-4 md:w-3/4">
               <Link href="mailto:infod.pastel@gmail.com" className="flex p-2 items-center rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-200 border border-gray-300">
                 <div className="flex items-center justify-center rounded-lg">
                   <img src={EMAIL} alt="E-mail" className="h-16" />
@@ -107,7 +106,7 @@ const ContactPage = () => {
         </div>
       </div>
 
-      <div className="max-w-5xl mx-auto mt-16">
+      <div className="max-w-5xl mx-auto mt-16 px-4 md:px-0">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <TextInput as="input" label="Nombre Completo" placeholder="Su nombre completo" />
           <TextInput as="input" label="Email" placeholder="ejemplo@suemail.com" />
@@ -121,7 +120,11 @@ const ContactPage = () => {
             placeholder="¡Hola! Me gustaría preguntar acerca de"
           />
         </div>
-        <SendButton />
+        <div className='flex w-full justify-end'>
+          <button className="bg-green-900 w-full md:w-auto py-4 px-8 rounded-lg text-white font-medium">
+            Enviar Mensaje
+          </button>
+        </div>
       </div>
     </>
   )

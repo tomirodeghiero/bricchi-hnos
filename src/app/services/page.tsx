@@ -27,55 +27,55 @@ const Services = () => {
         <div className="flex flex-col lg:flex-row justify-between items-center lg:space-x-8">
           {/* Left side */}
           <div className="flex flex-col space-y-6 lg:w-1/3">
-            <div className="flex flex-col items-end space-x-4">
+            <div className="flex flex-col items-center md:items-end space-x-4">
               <Image src={SERVICE_01} alt="Icono Entrega Rápida" width={32} height={32} />
               <div>
-                <h3 className="font-semibold text-green-900 text-end my-1">Entrega Rápida</h3>
-                <p className="text-gray-800 font-open-sans text-end text-[0.9rem]">Logística eficiente para asegurar que tus pedidos lleguen a tiempo, utilizando sistemas avanzados de gestión de inventario.</p>
+                <h3 className="font-semibold text-green-900 text-center md:text-end my-1">Entrega Rápida</h3>
+                <p className="text-gray-800 font-open-sans text-center md:text-end text-[0.9rem]">Logística eficiente para asegurar que tus pedidos lleguen a tiempo, utilizando sistemas avanzados de gestión de inventario.</p>
               </div>
             </div>
-            <div className="flex flex-col items-end space-x-4">
+            <div className="flex flex-col items-center md:items-end space-x-4">
               <Image src={SERVICE_02} alt="Icono Venta de Maquinaria" width={32} height={32} />
               <div>
-                <h3 className="font-semibold text-green-900 text-end my-1">Venta de Maquinaria</h3>
-                <p className="text-gray-800 font-open-sans text-end text-[0.9rem]">Equipos de alta calidad para todas tus necesidades agrícolas.</p>
+                <h3 className="font-semibold text-green-900 text-center md:text-end my-1">Venta de Maquinaria</h3>
+                <p className="text-gray-800 font-open-sans text-center md:text-end text-[0.9rem]">Equipos de alta calidad para todas tus necesidades agrícolas.</p>
               </div>
             </div>
-            <div className="flex flex-col items-end space-x-4">
+            <div className="flex flex-col items-center md:items-end space-x-4">
               <Image src={SERVICE_03} alt="Icono Repuestos para Maquinaria" width={32} height={32} />
               <div>
-                <h3 className="font-semibold text-green-900 text-end my-1">Repuestos para Maquinaria</h3>
-                <p className="text-gray-800 font-open-sans text-end text-[0.9rem]">Repuestos originales y garantizados para asegurar el óptimo funcionamiento de tu equipo.</p>
+                <h3 className="font-semibold text-green-900 text-center md:text-end my-1">Repuestos para Maquinaria</h3>
+                <p className="text-gray-800 font-open-sans text-center md:text-end text-[0.9rem]">Repuestos originales y garantizados para asegurar el óptimo funcionamiento de tu equipo.</p>
               </div>
             </div>
           </div>
 
           {/* Center image */}
-          <div className="lg:w-1/3 my-8 lg:my-0">
+          <div className="hidden md:block lg:w-1/3 my-8 lg:my-0">
             <img src={SERVICES} alt="Central Image" className="w-full mx-auto" />
           </div>
 
           {/* Right side */}
           <div className="flex flex-col space-y-6 lg:w-1/3">
-            <div className="flex flex-col items-start">
+            <div className="flex flex-col items-center md:items-start mt-5 md:mt-0">
               <Image src={SERVICE_04} alt="Icono Innovación y Sostenibilidad" width={32} height={32} />
               <div>
-                <h3 className="font-semibold text-green-900 my-1">Innovación y Sostenibilidad</h3>
-                <p className="text-gray-800 font-open-sans text-start text-[0.9rem]">Nos dedicamos a ofrecer soluciones innovadoras y sostenibles para el sector agrícola, garantizando la máxima productividad y cuidado del medio ambiente.</p>
+                <h3 className="font-semibold text-center md:text-start text-green-900 my-1">Innovación y Sostenibilidad</h3>
+                <p className="text-gray-800 font-open-sans text-center md:text-start text-[0.9rem]">Nos dedicamos a ofrecer soluciones innovadoras y sostenibles para el sector agrícola, garantizando la máxima productividad y cuidado del medio ambiente.</p>
               </div>
             </div>
-            <div className="flex flex-col items-start">
+            <div className="flex flex-col items-center md:items-start">
               <Image src={SERVICE_05} alt="Icono Mantenimiento y Reparación" width={32} height={32} />
               <div>
-                <h3 className="font-semibold text-green-900 my-1">Mantenimiento y Reparación</h3>
-                <p className="text-gray-800 font-open-sans text-start text-[0.9rem]">Servicio técnico especializado para mantener tu maquinaria en perfecto estado.</p>
+                <h3 className="font-semibold text-center md:text-start text-green-900 my-1">Mantenimiento y Reparación</h3>
+                <p className="text-gray-800 font-open-sans text-center md:text-start text-[0.9rem]">Servicio técnico especializado para mantener tu maquinaria en perfecto estado.</p>
               </div>
             </div>
-            <div className="flex flex-col">
+            <div className="flex flex-col items-center md:items-start">
               <Image src={SERVICE_06} alt="Icono Asesoramiento Técnico" width={32} height={32} />
               <div>
-                <h3 className="font-semibold text-green-900 my-1">Asesoramiento Técnico</h3>
-                <p className="text-gray-800 font-open-sans text-start text-[0.9rem]">Consultoría personalizada para maximizar la eficiencia y productividad de tus operaciones agrícolas.</p>
+                <h3 className="font-semibold text-green-900 my-1 text-center md:text-start">Asesoramiento Técnico</h3>
+                <p className="text-gray-800 font-open-sans text-center md:text-start text-[0.9rem]">Consultoría personalizada para maximizar la eficiencia y productividad de tus operaciones agrícolas.</p>
               </div>
             </div>
           </div>
@@ -89,7 +89,7 @@ const Services = () => {
         </Link>
       </div>
 
-      <div data-aos="fade-up" className="max-w-5xl mx-auto mt-10 h-[27.5rem] p-4 lg:p-0 border-none rounded-3xl mb-10">
+      <div data-aos="fade-up" className="max-w-5xl mx-auto mt-10 h-[27.5rem] p-4 lg:p-0 border-none rounded-3xl">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13361.13500055996!2d-64.3828499!3d-33.1541768!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95d1ff821678a3eb%3A0x3e83cf1394f36c4e!2sBricchi%20Hnos%20S.A!5e0!3m2!1ses-419!2sar!4v1724025086608!5m2!1ses-419!2sar"
           className='rounded-3xl w-full h-full'
