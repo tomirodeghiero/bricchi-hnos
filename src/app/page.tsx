@@ -89,17 +89,13 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Tercera Sección */}
       <div className="mt-10 px-4 py-12 lg:px-0  bg-gray-200">
         <div className="max-w-6xl flex mx-auto gap-8">
-          {/* Contenedor de la imagen que ocupa todo el alto */}
           <div className="w-full h-full flex-1">
             <img src={HOME_03} alt="Sobre Nosotros" className="w-full h-full object-cover rounded-lg" />
           </div>
 
-          {/* Contenido a la derecha */}
           <div className="flex-1 flex flex-col justify-center">
-            {/* Título sobre nosotros */}
             <h1 className="font-yellowtail text-green-400 text-2xl font-medium mb-1">
               Sobre Nosotros
             </h1>
@@ -112,9 +108,7 @@ export default function Home() {
               En <strong>Bricchi Hnos.</strong>, nos comprometemos a ofrecer productos y servicios de excelencia para asegurar el éxito de nuestros clientes.
             </p>
 
-            {/* Sección de repuestos y estándares */}
             <div className="space-y-8">
-              {/* Repuestos de Calidad */}
               <div className="flex items-start gap-4">
                 <div className="bg-white p-4 w-28 rounded-lg">
                   <img src={QUALITY} alt="Repuestos de Calidad" className="w-12 h-12" />
@@ -127,7 +121,6 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Estándares de Calidad */}
               <div className="flex items-start gap-4">
                 <div className="bg-white p-4 w-28 rounded-lg">
                   <img src={STANDARD} alt="Estándares de Calidad" className="w-12 h-12" />
@@ -151,9 +144,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Tercera Sección */}
       <div className="flex flex-col items-center my-10 justify-center max-w-5xl mx-auto">
-        {/* Título sobre nosotros */}
         <h1 className="font-yellowtail text-green-400 text-2xl font-medium mb-1">
           Maquinaria de Calidad
         </h1>
