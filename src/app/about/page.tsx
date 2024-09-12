@@ -68,7 +68,7 @@ const About = () => {
               Acerca de Nosotros
             </h1>
             <h2 className="text-3xl font-semibold text-green-900">
-              Hacemos Maquinarias Diseñadas Para El Éxito
+              Comercializamos Maquinarias Diseñadas Para El Éxito
             </h2>
             <p className="text-gray-800 text-sm mt-2">
               Ofrecemos las mejores soluciones en maquinaria agrícola para maximizar tu productividad y eficiencia.

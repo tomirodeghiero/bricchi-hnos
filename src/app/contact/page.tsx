@@ -31,9 +31,9 @@ const ContactPage = () => {
           </div>
 
           <div className="w-full lg:w-1/2 lg:pl-4 mx-auto py-8" data-aos="fade-left">
-            <h1 className="text-green-900 text-3xl font-semibold leading-[2.25rem]">Nos encantaría hablar sobre cómo podemos trabajar juntos.</h1>
+            <h1 className="text-green-900 text-3xl font-semibold leading-[2.25rem]">Tu consulta es importante para nosotros.</h1>
             <p className="text-gray-800 font-family-jost mt-2 leading-[1.5rem] font-open-sans">
-              Estamos aquí para ofrecerte las mejores soluciones en maquinaria agrícola y repuestos. Contáctanos para más información y asistencia personalizada.
+              ¿Tenés alguna consulta o querés más información sobre nuestros productos y servicios? No dudes en contactarnos. Nuestro equipo está listo para asistirte y encontrar la mejor solución para vos. <span className='font-medium'>¡Escribinos y empecemos a trabajar juntos!</span>
             </p>
 
             <div className="flex-col mt-6 space-y-4 md:w-3/4">
@@ -43,7 +43,7 @@ const ContactPage = () => {
                 </div>
                 <div className="ml-4">
                   <p className="text-lg font-semibold text-green-900">Mensaje</p>
-                  <p className="text-gray-800">infod.pastel@gmail.com</p>
+                  <p className="text-gray-800">bricchihnos@gmail.com</p>
                 </div>
               </Link>
               <div onClick={handleClickToWhatsApp} className="cursor-pointer flex p-2 items-center rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-200 border border-gray-300">

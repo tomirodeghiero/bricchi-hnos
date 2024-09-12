@@ -188,18 +188,18 @@ export default function Home() {
             </h2>
 
             <p className="text-gray-800 font-open-sans text-base mt-2 mb-4">
-              En <strong>Bricchi Hnos.</strong>, nos comprometemos a ofrecer productos y servicios de excelencia para asegurar el éxito de nuestros clientes.
+              En <strong>Bricchi Hnos.</strong>, ofrecemos maquinaria agrícola y vial de alta calidad para mejorar la eficiencia y productividad en el campo y en la construcción. Proporcionamos soluciones innovadoras y servicio de excelencia.
             </p>
 
             <div className="space-y-8">
               <div className="flex items-start gap-4">
                 <div className="bg-white p-4 w-28 rounded-lg">
-                  <img src={QUALITY} alt="Repuestos de Calidad" className="w-12 h-12" />
+                  <img src={QUALITY} alt="Repuestos Originales" className="w-12 h-12" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-green-900">Repuestos de Calidad</h3>
+                  <h3 className="text-lg font-semibold text-green-900">Repuestos Originales</h3>
                   <p className="text-gray-800 text-[0.9rem] font-open-sans">
-                    Ofrecemos una extensa gama de repuestos originales para asegurar el óptimo funcionamiento de tu maquinaria agrícola.
+                    Vendemos repuestos originales que aseguran el rendimiento y la durabilidad de tu maquinaria. Calidad garantizada en cada componente para que sigas trabajando sin interrupciones.
                   </p>
                 </div>
               </div>
