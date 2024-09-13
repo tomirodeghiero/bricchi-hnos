@@ -170,7 +170,7 @@ export default function Home() {
             <img
               src={HOME_03}
               alt="Sobre Nosotros"
-              className="w-full h-full object-cover rounded-lg"
+              className="w-full object-cover rounded-lg"
             />
           </div>
 
