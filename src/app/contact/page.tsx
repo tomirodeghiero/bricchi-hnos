@@ -48,7 +48,7 @@ const ContactPage = () => {
               </Link>
               <div onClick={handleClickToWhatsApp} className="cursor-pointer flex p-2 items-center rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-200 border border-gray-300">
                 <div className="flex items-center justify-center rounded-lg">
-                  <img src={EMAIL} alt="E-mail" className="h-16" />
+                  <img src={TELEPHONE} alt="E-mail" className="h-16" />
                 </div>
                 <div className="ml-4">
                   <p className="text-lg font-semibold text-green-900">Teléfono</p>
@@ -82,7 +82,7 @@ const ContactPage = () => {
         <img
           src={CONTACT_BACKGROUND}
           alt="Background"
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover object-bottom"
         />
         <div className="relative w-full flex justify-end">
           <div className="p-8 max-w-[30rem] bg-white bg-opacity-90 rounded-xl shadow-lg m-8">
@@ -105,6 +105,7 @@ const ContactPage = () => {
           </div>
         </div>
       </div>
+
 
       <div className="max-w-5xl mx-auto mt-16 px-4 md:px-0">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

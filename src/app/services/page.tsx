@@ -24,7 +24,7 @@ const Services = () => {
           Un Futuro Mejor
         </h2>
 
-        <div className="flex flex-col lg:flex-row justify-between items-center lg:space-x-8">
+        <div className="flex flex-col lg:flex-row justify-between lg:space-x-8">
           {/* Left side */}
           <div className="flex flex-col space-y-6 lg:w-1/3">
             <div className="flex flex-col items-center md:items-end space-x-4">
@@ -56,7 +56,7 @@ const Services = () => {
 
           {/* Center image */}
           <div className="hidden md:block lg:w-1/3 my-8 lg:my-0">
-            <img src={SERVICES} alt="Central Image" className="w-full mx-auto" />
+            <img src={SERVICES} alt="Central Image" className="w-full h-full object-cover rounded-xl shadow-sm" />
           </div>
 
           {/* Right side */}
