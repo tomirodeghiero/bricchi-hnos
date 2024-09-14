@@ -174,7 +174,6 @@ export default function Home() {
             />
           </div>
 
-          {/* Contenido - Aparece arriba en mobile, a la derecha en desktop */}
           <div
             className="flex-1 flex flex-col justify-center"
             data-aos="fade-left"
