@@ -1,12 +1,10 @@
+import React from "react";
+import Link from "next/link";
 import HeaderBackground from "@/components/header-background/HeaderBackground";
-import React, { useEffect } from "react";
 import { BRICCHI_HNOS_BACKGROUND } from "@/utils/assets/images";
-import GalleryShop from "@/components/gallery-shop";
-import { GO_TO_SHOP, SERVICE_01 } from "@/utils/constants/services";
-import Image from "next/image";
+import { GO_TO_SHOP } from "@/utils/constants/services";
 import { ABOUT_01, ABOUT_02 } from "@/utils/constants/about";
 import { CIRCLE, SPARE_PARTS, TRACTOR } from "@/utils/assets/icons/icons";
-import Link from "next/link";
 import { IMAGE_01, IMAGE_02, IMAGE_03, IMAGE_04 } from "@/utils/assets/categories/categories";
 
 const About = () => {
@@ -62,7 +60,6 @@ const About = () => {
             <img src={ABOUT_01} alt="Sobre Nosotros" className="w-full rounded-lg" />
           </div>
 
-          {/* Contenido - Aparece arriba en mobile, a la derecha en desktop */}
           <div className="w-full lg:w-1/2 md:mt-10 px-4 lg:px-0" data-aos="fade-left">
             <h1 className="font-yellowtail text-green-400 text-2xl font-medium mb-1">
               Acerca de Nosotros

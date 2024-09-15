@@ -1,4 +1,4 @@
-import { GalleryItem, STATIC_PRODUCTS } from "@/components/gallery-shop";
+import { GalleryItem } from "@/components/gallery-shop";
 import { QUALITY, STANDARD } from "@/utils/assets/icons/icons";
 import { BACKGROUND_STATISTICS, CAMP, COMPANIES, HERO, HOME_01, HOME_02, HOME_03, STATISTICS } from "@/utils/constants/home";
 import { GO_TO_SHOP } from "@/utils/constants/services";
