@@ -1,10 +1,10 @@
 "use client";
 
-import { getMinPrice } from "@/utils/functions/functions";
 import React, { useEffect, useState } from "react";
+import Link from "next/link";
+import { getMinPrice } from "@/utils/functions/functions";
 import SeeMoreInShopButton from "../buttons/SeeMoreInShopButton";
 import { SHOPPING_CART } from "@/utils/assets/icons/icons";
-import Link from "next/link";
 
 type Product = {
   mainImageUrl: string;

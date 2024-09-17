@@ -1,5 +1,5 @@
-import { getMinPrice } from "@/utils/functions/functions";
 import Link from "next/link";
+import { getMinPrice } from "@/utils/functions/functions";
 import { NoResults } from "../no-results";
 import { SHOPPING_CART } from "@/utils/assets/icons/icons";
 

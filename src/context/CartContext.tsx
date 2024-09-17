@@ -15,13 +15,10 @@ type CartItem = Product & {
   measure: string;
 };
 
-// Creación del contexto
 const CartContext = createContext({} as any);
 
-// Hook personalizado para usar el contexto del carrito
 export const useCart = () => useContext(CartContext);
 
-// Proveedor del contexto
 export const CartProvider = ({ children }: any) => {
   const [cart, setCart] = useState<CartItem[]>([]);
 
@@ -33,21 +30,19 @@ export const CartProvider = ({ children }: any) => {
     quantity: any,
     size: string,
     color: string,
-    measure: string // Add measure to the function parameters
+    measure: string
   ) => {
     setCart((prevCart: any) => {
       const productInCart = prevCart.find(
         (item: any) => item.productId === productId
       );
       if (productInCart) {
-        // Si el producto ya está en el carrito, aumentar la cantidad
         return prevCart.map((item: any) =>
           item.productId === productId
             ? { ...item, quantity: item.quantity + quantity }
             : item
         );
       } else {
-        // Si el producto no está en el carrito, añadirlo
         return [
           ...prevCart,
           {

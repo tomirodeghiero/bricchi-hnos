@@ -1,13 +1,13 @@
 "use client";
 
+import Link from 'next/link'
+import React from 'react'
 import HeaderBackground from '@/components/header-background/HeaderBackground';
 import TextInput from '@/components/text-input/TextInput';
 import { CONTACT, CONTACT_BACKGROUND } from '@/utils/assets/contact/contact';
 import { EMAIL, FACEBOOK, INSTAGRAM, LOCATION, TELEPHONE } from '@/utils/assets/icons/icons';
 import { BRICCHI_HNOS_BACKGROUND } from '@/utils/assets/images';
 import { FACEBOOK_URL, INSTAGRAM_URL, PHONE_NUMBER } from '@/utils/constants/constants';
-import Link from 'next/link'
-import React from 'react'
 
 const ContactPage = () => {
   const handleClickToWhatsApp = () => {

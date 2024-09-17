@@ -1,10 +1,9 @@
 "use client";
 
+import React, { useEffect, useMemo, useRef, useState } from 'react';
+import Link from 'next/link';
 import { NO_RESULTS } from '@/utils/assets/icons/icons';
 import { CATEGORIES } from '@/utils/constants/categories';
-import { formatPriceARS } from '@/utils/functions/functions';
-import Link from 'next/link';
-import React, { useEffect, useMemo, useRef, useState } from 'react';
 
 export const STATIC_PRODUCTS = [
     {

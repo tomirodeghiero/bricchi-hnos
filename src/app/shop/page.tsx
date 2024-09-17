@@ -1,7 +1,7 @@
-import HeaderBackground from "@/components/header-background/HeaderBackground";
 import React from "react";
-import { BRICCHI_HNOS_BACKGROUND } from "@/utils/assets/images";
+import HeaderBackground from "@/components/header-background/HeaderBackground";
 import GalleryShop from "@/components/gallery-shop";
+import { BRICCHI_HNOS_BACKGROUND } from "@/utils/assets/images";
 
 const Shop = () => {
   return (

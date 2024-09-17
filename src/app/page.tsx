@@ -5,7 +5,6 @@ import { GO_TO_SHOP } from "@/utils/constants/services";
 import Link from "next/link";
 import { IMAGE_01, IMAGE_02, IMAGE_03, IMAGE_04 } from "@/utils/assets/categories/categories";
 
-
 export default function Home() {
   const productsOnOffer = [
     {

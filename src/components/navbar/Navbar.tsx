@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from "react";
 import { FaSearch, FaShoppingCart } from 'react-icons/fa';
 import Link from "next/link";
-import Image from "next/image";
 import { BRICCHI_HNOS_LOGOTYPE, SPAIN } from "@/utils/assets/images";
 import {
   CLOSE_MENU,

@@ -55,7 +55,6 @@ const About = () => {
 
       <div className="md:mx-auto">
         <div className="flex flex-col lg:flex-row mx-auto md:gap-20 max-w-5xl" data-aos="fade-up">
-          {/* Imagen - Aparece abajo en mobile, a la izquierda en desktop */}
           <div className="w-full lg:w-1/2 lg:order-first order-last" data-aos="fade-right">
             <img src={ABOUT_01} alt="Sobre Nosotros" className="w-full rounded-lg" />
           </div>

@@ -1,5 +1,5 @@
-import HeaderBackground from "@/components/header-background/HeaderBackground";
 import React from "react";
+import HeaderBackground from "@/components/header-background/HeaderBackground";
 import { BRICCHI_HNOS_BACKGROUND } from "@/utils/assets/images";
 import { IMAGE_01, IMAGE_02, IMAGE_03, IMAGE_04, IMAGE_05, IMAGE_06 } from "@/utils/assets/categories/categories";
 

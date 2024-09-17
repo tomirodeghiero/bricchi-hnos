@@ -1,10 +1,10 @@
+import React from "react";
+import Image from "next/image";
 import {
   FREE_SHIPPING,
   HIGH_QUALITY,
   WARRANTY,
 } from "@/utils/assets/icons/icons";
-import Image from "next/image";
-import React from "react";
 
 const Features = () => {
   return (
