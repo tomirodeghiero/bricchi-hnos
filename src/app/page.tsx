@@ -4,6 +4,7 @@ import { BACKGROUND_STATISTICS, CAMP, COMPANIES, HERO, HOME_01, HOME_02, HOME_03
 import { GO_TO_SHOP } from "@/utils/constants/services";
 import Link from "next/link";
 import { IMAGE_01, IMAGE_02, IMAGE_03, IMAGE_04 } from "@/utils/assets/categories/categories";
+import ButtonUI from "@/components/buttons/ButtonUI";
 
 export default function Home() {
   const productsOnOffer = [
@@ -215,13 +216,8 @@ export default function Home() {
               </div>
             </div>
 
-            <Link href="/shop">
-              <button
-                className="bg-green-900 my-8 hover:bg-white border border-green-900 font-medium focus:outline-none focus:ring-1 focus:ring-green-600 focus:ring-opacity-50 transition duration-300 ease-in-out transform hover:shadow-md hover:-translate-y-1 rounded-xl text-white hover:text-green-900 px-6 py-3 flex items-center"
-              >
-                Ir a la Tienda
-                <img src={GO_TO_SHOP} alt="Ir a la Tienda" className="w-5 h-5 ml-2" />
-              </button>
+            <Link href="/shop" className="mt-8">
+              <ButtonUI text="Ir a la Tienda" />
             </Link>
           </div>
         </div>

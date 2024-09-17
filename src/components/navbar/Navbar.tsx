@@ -222,7 +222,7 @@ export default function Navbar() {
     <nav className="flex justify-between items-center px-16 py-8 bg-white">
       <div className="flex items-center gap-16">
         <Link href="/">
-          <img className="h-14" src={BRICCHI_HNOS_LOGOTYPE} alt="Bricchi Hnos. Logotype" />
+          <img className="h-10" src={BRICCHI_HNOS_LOGOTYPE} alt="Bricchi Hnos. Logotype" />
         </Link>
 
         <div className="space-x-12 font-medium text-lg">
