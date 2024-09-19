@@ -113,7 +113,7 @@ export default function Home() {
           <h2
             className="mt-2 text-4xl font-bold text-yellow-300 sm:text-5xl md:text-6xl font-livvic"
           >
-            Producción Agrícola
+            Maquinaria Agrícola
           </h2>
           <h2
             className="mt-1 text-4xl font-bold sm:text-5xl md:text-6xl font-livvic"
