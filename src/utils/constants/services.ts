@@ -32,4 +32,21 @@ export const SERVICES_IMAGES = [
   },
 ];
 
+export const SERVICES_IMAGES_02 = [
+  {
+    title: "Maquinaria Vial",
+    subtitle: "Equipos Michigan y Hanomag",
+    image: SECONDARY_IMAGE_03,
+  },
+  {
+    title: "Sembradoras",
+    subtitle: "Tecnología Apache",
+    image: SECONDARY_IMAGE_01,
+  },
+  {
+    title: "Fertilización",
+    subtitle: "Soluciones Fertec y VTI Agri",
+    image: SECONDARY_IMAGE_02,
+  },
+];
 

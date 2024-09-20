@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import HeaderBackground from "@/components/header-background/HeaderBackground";
 import { BRICCHI_HNOS_BACKGROUND } from "@/utils/assets/images";
-import { GO_TO_SHOP, SERVICES_IMAGES } from "@/utils/constants/services";
+import { GO_TO_SHOP, SERVICES_IMAGES, SERVICES_IMAGES_02 } from "@/utils/constants/services";
 import { ABOUT_01, ABOUT_02 } from "@/utils/constants/about";
 import { CIRCLE, SPARE_PARTS, TRACTOR } from "@/utils/assets/icons/icons";
 import { IMAGE_01, IMAGE_02, IMAGE_03, IMAGE_04 } from "@/utils/assets/categories/categories";
@@ -164,7 +164,7 @@ const About = () => {
             </h3>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-5">
-              {SERVICES_IMAGES.map((service, index) => (
+              {SERVICES_IMAGES_02.map((service, index) => (
                 <div key={index} className="flex flex-col rounded-b-2xl" data-aos="zoom-up">
                   <div className="w-full overflow-hidden rounded-[1.5rem]">
                     <img
