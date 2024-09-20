@@ -220,7 +220,7 @@ export default function Home() {
           Nuestros Productos
         </h3>
 
-        <div className="mx-auto max-w-6xl py-4 px-2" data-aos="fade-right">
+        <div className="mx-auto w-full px-5  md:max-w-7xl py-4 md:px-2" data-aos="fade-right">
           <div className="grid grid-cols-2 md:grid-cols-3 gap-2 mt-4">
             {!!STATIC_PRODUCTS && STATIC_PRODUCTS.map((lamp: any, index) => (
               <GalleryItem key={index} {...lamp} />

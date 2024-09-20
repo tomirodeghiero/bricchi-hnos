@@ -38,9 +38,9 @@ const About = () => {
         subtitle="Inicio - Empresa"
       />
 
-      <div className="md:mx-auto">
+      <div className="md:mx-auto mt-8">
         <div className="flex flex-col lg:flex-row mx-auto md:gap-20 max-w-5xl" data-aos="fade-up">
-          <div className="w-full lg:w-1/2 lg:order-first order-last" data-aos="fade-right">
+          <div className="w-full lg:w-1/2 mt-8 md:mt-14 lg:order-first order-last" data-aos="fade-right">
             <img src={ABOUT_01} alt="Sobre Nosotros" className="w-full rounded-lg" />
           </div>
 

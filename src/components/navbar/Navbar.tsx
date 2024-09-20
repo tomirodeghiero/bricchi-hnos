@@ -134,7 +134,7 @@ export default function Navbar() {
                   onClick={(event) => handleLinkClick(event, "/")}
                 >
                   <div className="flex gap-4">
-                    <img className="h-6 cursor-pointer" src={HOME} alt="Home" />
+                    {/* <img className="h-6 cursor-pointer" src={HOME} alt="Home" /> */}
                     <h2 className="text-xl">Inicio</h2>
                   </div>
                   <img
@@ -148,7 +148,7 @@ export default function Navbar() {
                   onClick={(event) => handleLinkClick(event, "/about")}
                 >
                   <div className="flex gap-4">
-                    <img className="h-6 cursor-pointer" src={HOME} alt="Home" />
+                    {/* <img className="h-6 cursor-pointer" src={HOME} alt="Home" /> */}
                     <h2 className="text-xl">Empresa</h2>
                   </div>
                   <img
@@ -162,11 +162,11 @@ export default function Navbar() {
                   onClick={(event) => handleLinkClick(event, "/shop")}
                 >
                   <div className="flex gap-4">
-                    <img
+                    {/* <img
                       className="h-6 cursor-pointer"
                       src={SHOPPING_CART}
                       alt="Shopping"
-                    />
+                    /> */}
                     <h2 className="text-xl">Productos</h2>
                   </div>
                   <img
@@ -180,7 +180,7 @@ export default function Navbar() {
                   onClick={(event) => handleLinkClick(event, "/categories")}
                 >
                   <div className="flex gap-4">
-                    <img className="h-6 cursor-pointer" src={HOME} alt="Home" />
+                    {/* <img className="h-6 cursor-pointer" src={HOME} alt="Home" /> */}
                     <h2 className="text-xl">Categorías</h2>
                   </div>
                   <img
@@ -194,8 +194,8 @@ export default function Navbar() {
                   onClick={(event) => handleLinkClick(event, "/services")}
                 >
                   <div className="flex gap-4">
-                    <img className="h-6 cursor-pointer" src={HOME} alt="Home" />
-                    <h2 className="text-xl">Servicio</h2>
+                    {/* <img className="h-6 cursor-pointer" src={HOME} alt="Home" /> */}
+                    <h2 className="text-xl">Servicios</h2>
                   </div>
                   <img
                     className="h-4 cursor-pointer"

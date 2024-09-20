@@ -12,7 +12,7 @@ const Categories = () => {
         title="Descúbrenos"
         subtitle="Inicio - Categorías"
       />
-      <div className="max-w-5xl mx-auto mt-8" data-os="fade-up">
+      <div className="max-w-5xl mx-auto mt-8 px-5 md:px-0" data-os="fade-up">
         <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 md:gap-4">
           {CATEGORIES_IMAGES.map((category, index) => (
             <Link href="/shop" key={index}>
