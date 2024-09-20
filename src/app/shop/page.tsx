@@ -336,9 +336,9 @@ const ShopPage = () => {
 
 const Shop = () => {
   return (
-    <Suspense>
+    <Suspense fallback={<div>Cargando...</div>}>
       <ShopPage />
-    </Suspense>
+    </Suspense >
   );
 };
 
