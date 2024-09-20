@@ -52,10 +52,12 @@ const Footer = () => {
           </div>
 
           {/* Bottom Text */}
-          <p className="flex items-center justify-center mt-5 gap-2 text-center text-gray-800 font-open-sans">
-            Desarrollado por
-            <span className="font-medium">💻 Tomás Rodeghiero.</span>
-          </p>
+          <Link href="https://tomirodeghiero.vercel.app" className="navlink" target="_blank" rel="noopener noreferrer">
+            <p className="flex items-center justify-center mt-5 gap-2 text-center text-gray-800 font-open-sans">
+              Desarrollado por
+              <span className="font-medium">💻 Tomás Rodeghiero.</span>
+            </p>
+          </Link>
         </div>
       </footer >
 
@@ -103,10 +105,12 @@ const Footer = () => {
           </div>
 
           {/* Bottom Text */}
-          <p className="flex items-center justify-center mt-5 gap-2 text-center text-gray-800 font-open-sans">
-            Desarrollado por
-            <span className="font-medium">💻 Tomás Rodeghiero.</span>
-          </p>
+          <Link href="https://tomirodeghiero.vercel.app" className="navlink" target="_blank" rel="noopener noreferrer">
+            <p className="flex items-center justify-center mt-5 gap-2 text-center text-gray-800 font-open-sans">
+              Desarrollado por
+              <span className="font-medium">💻 Tomás Rodeghiero.</span>
+            </p>
+          </Link>
         </div>
       </footer>
     </>

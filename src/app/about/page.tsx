@@ -2,10 +2,9 @@ import React from "react";
 import Link from "next/link";
 import HeaderBackground from "@/components/header-background/HeaderBackground";
 import { BRICCHI_HNOS_BACKGROUND } from "@/utils/assets/images";
-import { SERVICES_IMAGES, SERVICES_IMAGES_02 } from "@/utils/constants/services";
+import { SERVICES_IMAGES } from "@/utils/constants/services";
 import { ABOUT_01, ABOUT_02 } from "@/utils/constants/about";
 import { CIRCLE } from "@/utils/assets/icons/icons";
-import { IMAGE_01, IMAGE_02, IMAGE_03 } from "@/utils/assets/categories/categories";
 import { FaTractor, FaWrench } from "react-icons/fa";
 import ButtonUI from "@/components/buttons/ButtonUI";
 
