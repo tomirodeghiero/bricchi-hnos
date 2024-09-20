@@ -163,7 +163,7 @@ const ShopPage = () => {
 
     try {
       const response = await fetch(
-        `${process.env.BACKEND_URL}/api/products?page=1&limit=200`,
+        `/api/products?page=1&limit=200`,
         requestOptions
       );
 
