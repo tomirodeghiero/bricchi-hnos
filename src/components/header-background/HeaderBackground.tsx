@@ -9,7 +9,7 @@ const HeaderBackground = ({ background, title, subtitle, focusPosition = 'center
   }[focusPosition];
 
   return (
-    <div className="relative w-screen h-52 mb-8">
+    <div className="relative w-screen h-52">
       <img src={background} className={`h-full w-full object-cover ${objectPositionClass}`} alt="Background" />
 
       <div className="absolute w-full bottom-0 text-center">

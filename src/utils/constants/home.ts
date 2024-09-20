@@ -14,4 +14,7 @@ export const COMPANIES = [
   { image: "/assets/home/praba.png", },
   { image: "/assets/home/hanomag.png", },
   { image: "/assets/home/fertec.png", },
+  { image: "/assets/home/apache.png", },
+  { image: "/assets/home/yomel.jpg", },
+  { image: "/assets/home/michigan.jpg", },
 ];

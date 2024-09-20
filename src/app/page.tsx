@@ -1,31 +1,13 @@
 import { GalleryItem } from "@/components/gallery-shop";
 import { QUALITY, STANDARD } from "@/utils/assets/icons/icons";
 import { BACKGROUND_STATISTICS, CAMP, COMPANIES, HERO, HOME_01, HOME_02, HOME_03, STATISTICS } from "@/utils/constants/home";
-import { GO_TO_SHOP } from "@/utils/constants/services";
+import { GO_TO_SHOP, SERVICES_IMAGES } from "@/utils/constants/services";
 import Link from "next/link";
 import { IMAGE_01, IMAGE_02, IMAGE_03, IMAGE_04 } from "@/utils/assets/categories/categories";
 import ButtonUI from "@/components/buttons/ButtonUI";
+import { FaTools, FaCertificate, FaCheckCircle } from "react-icons/fa"
 
 export default function Home() {
-  const productsOnOffer = [
-    {
-      title: "Tractores",
-      image: IMAGE_01,
-    },
-    {
-      title: "Cosechadoras",
-      image: IMAGE_02,
-    },
-    {
-      title: "Sembradoras",
-      image: IMAGE_03,
-    },
-    {
-      title: "Pulverizadoras",
-      image: IMAGE_04,
-    },
-  ];
-
   const STATIC_PRODUCTS = [
     {
       id: 1,
@@ -120,18 +102,19 @@ export default function Home() {
           >
             De calidad
           </h2>
-          <Link href="/about">
-            <button
-              className="bg-yellow-300 hover:border-yellow-600 shadow-2xl text-stone-900 my-8 font-livvic border uppercase border-yellow-300 font-medium focus:outline-none focus:ring-1 focus:ring-green-600 focus:ring-opacity-50 transition duration-300 ease-in-out transform hover:shadow-md hover:-translate-y-1 rounded-lg px-6 py-3 flex items-center"
-            >
-              Descubre Más
-              <img src={GO_TO_SHOP} alt="Ir a la Tienda" className="w-5 h-5 ml-2" />
-            </button>
-          </Link>
+        </div>
+
+        <div className="flex justify-center items-center mx-auto w-full bg-red-200 z-50">
+          <div className="scrolldown" style={{ color: "skyblue" }}>
+            <div className="chevrons">
+              <div className="chevrondown"></div>
+              <div className="chevrondown"></div>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div className="relative mt-[10vh] py-10 flex flex-col justify-center lg:px-0 px-5" data-aos="fade-up">
+      <div className="relative mt-[2.5vh] md:mt-[10vh] py-10 flex flex-col justify-center lg:px-0 px-5" data-aos="fade-up">
         <div className="max-w-4xl mx-auto flex gap-8 flex-wrap sm:flex-nowrap">
           <img
             src={HOME_01}
@@ -147,7 +130,7 @@ export default function Home() {
           />
         </div>
 
-        <div className="flex flex-col md:flex-row justify-center items-center gap-20 mt-8">
+        <div className="flex flex-row justify-center items-center gap-8 md:gap-20 mt-8 md:max-w-5xl mx-auto">
           {COMPANIES.map((company, index) => (
             <div
               key={index}
@@ -178,11 +161,11 @@ export default function Home() {
             className="flex-1 flex flex-col justify-center"
             data-aos="fade-left"
           >
-            <h1 className="font-yellowtail text-green-400 text-2xl font-medium mb-1">
+            <h1 className="font-yellowtail text-red-500 text-2xl font-medium mb-1">
               Sobre Nosotros
             </h1>
 
-            <h2 className="text-3xl font-semibold text-green-900">
+            <h2 className="text-3xl font-semibold text-gray-900">
               Comprometidos Con <br /> La Agricultura
             </h2>
 
@@ -192,23 +175,27 @@ export default function Home() {
 
             <div className="space-y-8">
               <div className="flex items-start gap-4">
-                <div className="bg-white p-4 w-28 rounded-lg">
-                  <img src={QUALITY} alt="Repuestos Originales" className="w-12 h-12" />
+                <div className="w-30">
+                  <div className="bg-white h-20 w-20 flex items-center justify-center rounded-lg">
+                    <FaTools color="#E62128" className="w-8 h-8" />
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-green-900">Repuestos Originales</h3>
+                <div className="flex-grow">
+                  <h3 className="text-lg font-semibold text-gray-900">Repuestos Originales</h3>
                   <p className="text-gray-800 text-[0.9rem] font-open-sans">
-                    Vendemos repuestos originales que aseguran el rendimiento y la durabilidad de tu maquinaria. Calidad garantizada en cada componente para que sigas trabajando sin interrupciones.
+                    Vendemos repuestos originales que aseguran el rendimiento y la durabilidad de tu Maquinaria.
                   </p>
                 </div>
               </div>
 
               <div className="flex items-start gap-4" data-aos-delay="200">
-                <div className="bg-white p-4 w-28 rounded-lg">
-                  <img src={STANDARD} alt="Estándares de Calidad" className="w-12 h-12" />
+                <div className="w-30">
+                  <div className="bg-white h-20 w-20 flex items-center justify-center rounded-lg">
+                    <FaCheckCircle color="#E62128" className="w-8 h-8" />
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-green-900">Estándares de Calidad</h3>
+                <div className="flex-grow">
+                  <h3 className="text-lg font-semibold text-gray-900">Estándares de Calidad</h3>
                   <p className="text-gray-800 text-[0.9rem] font-open-sans">
                     Cumplimos con los más altos estándares de calidad para asegurar que nuestros productos y servicios superen tus expectativas.
                   </p>
@@ -216,7 +203,7 @@ export default function Home() {
               </div>
             </div>
 
-            <Link href="/shop" className="mt-8">
+            <Link href="/shop" className="mt-8 flex w-full justify-end md:justify-start">
               <ButtonUI text="Ir a la Tienda" />
             </Link>
           </div>
@@ -225,11 +212,11 @@ export default function Home() {
 
 
       <div className="flex flex-col items-center my-10 justify-center max-w-5xl mx-auto" data-aos="fade-up">
-        <h2 className="font-yellowtail text-green-400 text-2xl font-medium mb-1">
+        <h2 className="font-yellowtail text-red-500 text-2xl font-medium mb-1">
           Maquinaria de Calidad
         </h2>
 
-        <h3 className="text-3xl font-semibold text-green-900">
+        <h3 className="text-3xl font-semibold text-gray-900">
           Nuestros Productos
         </h3>
 
@@ -242,13 +229,7 @@ export default function Home() {
         </div>
 
         <Link href="/shop">
-          <button
-            className="bg-green-900 my-8 hover:bg-white border border-green-900 font-medium focus:outline-none focus:ring-1 focus:ring-green-600 focus:ring-opacity-50 transition duration-300 ease-in-out transform hover:shadow-md hover:-translate-y-1 rounded-xl text-white hover:text-green-900 px-6 py-3 flex items-center"
-            data-aos="fade-up"
-          >
-            Ver Más
-            <img src={GO_TO_SHOP} alt="Ir a la Tienda" className="w-5 h-5 ml-2" />
-          </button>
+          <ButtonUI text="Ver Más" />
         </Link>
       </div>
 
@@ -262,11 +243,11 @@ export default function Home() {
         <div className="absolute inset-0 bg-white opacity-90" />
 
         <div className="relative z-10 text-center max-w-6xl mx-auto">
-          <h2 className="font-yellowtail text-green-400 text-2xl font-medium mb-1" data-aos="fade-up">
+          <h2 className="font-yellowtail text-red-500 text-2xl font-medium mb-1" data-aos="fade-up">
             Testimonios
           </h2>
 
-          <h3 className="text-3xl font-semibold text-green-900" data-aos="fade-up">
+          <h3 className="text-3xl font-semibold text-gray-900" data-aos="fade-up">
             ¿Qué dicen nuestros clientes?
           </h3>
 
@@ -284,41 +265,36 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="bg-green-900 py-14">
+      <div className="bg-gray-200 py-14">
         <div className="max-w-5xl mx-auto px-4 lg:px-0">
           <div className="w-full flex flex-col md:flex-row justify-between items-center relative">
             <div className="flex flex-col">
-              <h2 className="font-yellowtail text-green-400 text-2xl font-medium text-left mb-1">
+              <h2 className="font-yellowtail text-red-500 text-2xl font-medium text-left mb-1">
                 Ofertas
               </h2>
-              <h3 className="text-3xl font-semibold text-left text-white">
+              <h3 className="text-3xl font-semibold text-left text-gray-900">
                 Te Ofrecemos Maquinaria de Calidad <br />
                 & Al Mejor Precio
               </h3>
             </div>
 
             <Link href="/about">
-              <button
-                className="bg-yellow-300 right-0 bottom-0 mt-5 md:mt-0 md:absolute text-stone-900 font-livvic border border-yellow-300 font-medium focus:outline-none focus:ring-1 focus:ring-green-600 focus:ring-opacity-50 transition duration-300 ease-in-out transform hover:shadow-md hover:-translate-y-1 rounded-lg px-6 py-3 flex items-center"
-              >
-                Ver Más Productos
-                <img src={GO_TO_SHOP} alt="Ir a la Tienda" className="w-5 h-5 ml-2" />
-              </button>
+              <ButtonUI text="Ver Más Productos" />
             </Link>
           </div>
 
-          <div className="max-w-5xl mx-auto mt-8 bg-green-900">
+          <div className="max-w-5xl mx-auto mt-8">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-              {productsOnOffer.map((product, index: number) => (
+              {SERVICES_IMAGES.map((product, index: number) => (
                 <div key={index} className="flex flex-col rounded-b-2xl" data-aos="fade-up" data-aos-delay={`${index * 100}`}>
                   <div className="w-full overflow-hidden rounded-[1.5rem]">
                     <img
                       src={product.image}
                       alt={product.title}
-                      className="w-full h-full object-cover transition-transform duration-300 transform hover:scale-105"
+                      className="w-full h-60 object-cover transition-transform duration-300 transform hover:scale-105"
                     />
                   </div>
-                  <h3 className="font-medium text-white mt-2 text-center text-xl px-4">
+                  <h3 className="font-medium text-gray-900 mt-2 text-center text-xl px-4">
                     {product.title}
                   </h3>
                 </div>
@@ -340,28 +316,28 @@ export default function Home() {
 
           <div className="relative z-10 ml-auto bg-white p-10 w-full lg:w-1/2 h-[28rem] rounded-lg md:rounded-l-3xl md:mr-12 flex items-center" data-aos="fade-left">
             <div>
-              <h2 data-aos="fade-up" className="font-yellowtail text-green-400 text-2xl font-medium text-left mb-1">
+              <h2 data-aos="fade-up" className="font-yellowtail text-red-500 text-2xl font-medium text-left mb-1">
                 Amigable con el Agro
               </h2>
-              <h3 data-aos="fade-up" className="text-3xl font-semibold text-left text-green-900 mt-1">
+              <h3 data-aos="fade-up" className="text-3xl font-semibold text-left text-gray-900 mt-1">
                 Bricchi Hnos. Es Tu Amigo <br /> En Maquinaria Agrícola
               </h3>
 
               <div className="space-y-4 mt-4">
                 <div data-aos="fade-up">
-                  <h4 className="text-lg font-medium text-green-900">Comienza con nuestra empresa</h4>
+                  <h4 className="text-lg font-medium text-gray-900">Comienza con nuestra empresa</h4>
                   <p className="text-gray-800 font-open-sans text-sm">
                     Ofrecemos las mejores soluciones en maquinaria agrícola para maximizar tu productividad y eficiencia.
                   </p>
                 </div>
                 <div data-aos="fade-up" data-aos-delay="100">
-                  <h4 className="text-lg font-medium text-green-900">Aprende cómo crecer con nosotros</h4>
+                  <h4 className="text-lg font-medium text-gray-900">Aprende cómo crecer con nosotros</h4>
                   <p className="text-gray-800 font-open-sans text-sm">
                     Descubre cómo nuestras innovaciones pueden transformar tu labor en la industria agrícola.
                   </p>
                 </div>
                 <div data-aos="fade-up" data-aos-delay="200">
-                  <h4 className="text-lg font-medium text-green-900">Estrategias agrícolas actuales</h4>
+                  <h4 className="text-lg font-medium text-gray-900">Estrategias agrícolas actuales</h4>
                   <p className="text-gray-800 font-open-sans text-sm">
                     Implementa las técnicas más avanzadas con nuestra moderna maquinaria de vanguardia.
                   </p>
@@ -372,23 +348,25 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="w-full py-20 bg-green-100">
+      <div className="w-full py-20 bg-gray-200">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 w-full">
-          {categories.map((category) => (
-            <div key={category.title} className="relative">
-              <img
-                src={category.image}
-                alt={category.title}
-                className="h-96 w-full rounded object-cover"
-              />
-              <div className="absolute inset-0 bg-opacity-40 flex items-center justify-center">
-                <div className="bg-white py-3 px-10 rounded-lg">
-                  <h2 className="text-lg font-medium text-center text-green-900">
-                    {category.title}
-                  </h2>
+          {SERVICES_IMAGES.slice(1).map((category) => (
+            <Link href="/shop" key={category.title}>
+              <div key={category.title} className="relative">
+                <img
+                  src={category.image}
+                  alt={category.title}
+                  className="h-96 w-full rounded object-cover"
+                />
+                <div className="absolute inset-0 bg-opacity-40 flex items-center justify-center">
+                  <div className="bg-white py-3 px-10 rounded-lg">
+                    <h2 className="text-lg font-medium text-center text-gray-900">
+                      {category.title}
+                    </h2>
+                  </div>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

@@ -4,6 +4,7 @@ import React, { useEffect, useMemo, useRef, useState } from 'react';
 import Link from 'next/link';
 import { NO_RESULTS } from '@/utils/assets/icons/icons';
 import { CATEGORIES } from '@/utils/constants/categories';
+import { GrNavigate } from 'react-icons/gr';
 
 export const STATIC_PRODUCTS = [
     {
@@ -79,20 +80,20 @@ const GalleryItemPlaceholder = () => (
     </div>
 );
 
-
 export const GalleryItem = ({ src, title, id, category }: any) => {
     const imageHeight = 'h-72 lg:h-96';
     return (
-        <Link className="w-full flex flex-col rounded-lg p-2 -sm hover:shadow-lg transition-shadow duration-200" href={`/shop/${id}`}>
-            <div className={`w-full overflow-x-auto rounded-lg ${imageHeight}`}>
+        <Link className="w-full flex flex-col rounded-lg p-2 hover:shadow-lg transition-shadow duration-200" href={`/product/${id}`}>
+            <div className={`w-full overflow-hidden rounded-lg ${imageHeight}`}>
                 <img src={src} alt={title} className="w-full h-full object-cover" />
             </div>
             <div className="text-center p-4 lg:mt-2 flex justify-between items-center">
-                <div className='text-left'>
-                    <p className="text-xl font-semibold text-green-900 font-open-sans">{title}</p>
-                    <p className="text-green-400 text-lg font-yellowtail">{category}</p>
+                <div className="text-left w-full">
+                    {/* Limitar el título con puntos suspensivos si es demasiado largo */}
+                    <p className="text-xl font-semibold text-green-900 font-open-sans overflow-hidden text-ellipsis whitespace-nowrap">{title}</p>
+                    {/* Limitar la categoría de la misma manera */}
+                    <p className="text-red-700 text-lg font-yellowtail overflow-hidden text-ellipsis whitespace-nowrap">{category}</p>
                 </div>
-                {/* <img src={NAVIGATE} alt="Navigate" className='hidden lg:h-12' /> */}
             </div>
         </Link>
     );
@@ -135,40 +136,6 @@ const GalleryShop = () => {
             setActiveSubcategory('Todas');
         }
         setIsAutoScrollEnabled(false);
-    };
-
-    const handleSubcategoryClick = (subcategory: any) => {
-        setActiveSubcategory(subcategory);
-    };
-
-    const renderSubcategoryTabs = () => {
-        if (activeCategory?.subcategories && activeCategory?.subcategories?.length > 0) {
-            return (
-                <div className="flex font-family-jost overflow-x-auto scroll-smooth whitespace-nowrap items-center w-full lg:rounded-2xl bg-white border border-green-900 mt-4" style={{
-                    scrollbarWidth: 'none',
-                    msOverflowStyle: 'none',
-                }}>
-                    <style>
-                        {`
-                        .flex::-webkit-scrollbar {
-                          display: none;
-                        }
-                        `}
-                    </style>
-                    {activeCategory.subcategories.map((subcategory: any) => (
-                        <button
-                            key={subcategory}
-                            className={`flex-grow min-w-[20%] font-jost text-lg font-medium py-2 lg:py-3 px-4 rounded-xl ${activeSubcategory === subcategory ? 'bg-yellow-300 text-gray-900' : 'text-gray-900'} focus:outline-none transition-colors duration-150 ease-in-out flex-shrink-0`}
-                            onClick={() => handleSubcategoryClick(subcategory)}
-                        >
-                            {subcategory}
-                        </button>
-                    ))}
-
-                </div>
-            );
-        }
-        return null;
     };
 
     // Function to fetch products
@@ -336,33 +303,6 @@ const GalleryShop = () => {
                     ))}
                 </div>
             </div>
-            {/* {renderSubcategoryTabs()} */}
-            {STATIC_PRODUCTS.length > 0 ?
-                <div className="mx-auto max-w-6xl py-4 px-2">
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4">
-                        {STATIC_PRODUCTS.map((lamp: any, index) => (
-                            <GalleryItem key={index} {...lamp} />
-                        ))}
-                    </div>
-                </div> :
-                <div className='w-full font-family-jost'>
-                    <div className="flex px-4 lg:px-0 mx-auto flex-col justify-center items-center">
-                        <img className="h-60" src={NO_RESULTS} alt={"Without results"} />
-                        <p className="font-medium text-xl text-center">
-                            No se encontraron productos que coincidan con los criterios de búsqueda.
-                        </p>
-                        <p className="mt-4 text-lg text-center">
-                            Por favor, intenta recortar o reformular su búsqueda 🔎
-                        </p>
-                        <button
-                            onClick={resetSearch}
-                            className="bg-white border py-2 mb-8 font-medium px-8 border-green-900 rounded mt-7 uppercase"
-                        >
-                            Restablecer Búsqueda
-                        </button>
-                    </div>
-                </div>
-            }
         </>
     );
 };

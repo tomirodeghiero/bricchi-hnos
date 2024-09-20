@@ -1,42 +1,10 @@
 import React from "react";
 import HeaderBackground from "@/components/header-background/HeaderBackground";
 import { BRICCHI_HNOS_BACKGROUND } from "@/utils/assets/images";
-import { IMAGE_01, IMAGE_02, IMAGE_03, IMAGE_04, IMAGE_05, IMAGE_06 } from "@/utils/assets/categories/categories";
+import { CATEGORIES_IMAGES } from "@/utils/constants/categories";
+import Link from "next/link";
 
 const Categories = () => {
-  const categories = [
-    {
-      title: "Tractores",
-      subtitle: "Máquinas potentes",
-      image: IMAGE_01,
-    },
-    {
-      title: "Cosechadoras",
-      subtitle: "Recolección eficiente",
-      image: IMAGE_02,
-    },
-    {
-      title: "Sembradoras",
-      subtitle: "Siembra precisa",
-      image: IMAGE_03,
-    },
-    {
-      title: "Pulverizadoras",
-      subtitle: "Protección de cultivos",
-      image: IMAGE_04,
-    },
-    {
-      title: "Tolvas",
-      subtitle: "Almacenamiento seguro",
-      image: IMAGE_05,
-    },
-    {
-      title: "Cabezal",
-      subtitle: "Corte preciso",
-      image: IMAGE_06,
-    },
-  ];
-
   return (
     <div>
       <HeaderBackground
@@ -44,22 +12,25 @@ const Categories = () => {
         title="Descúbrenos"
         subtitle="Inicio - Categorías"
       />
-      <div className="max-w-5xl mx-auto" data-os="fade-up">
+      <div className="max-w-5xl mx-auto mt-8" data-os="fade-up">
         <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 md:gap-4">
-          {categories.map((category, index) => (
-            <div key={index} className="flex flex-col px-2 mt-5 md:mt-0">
-              <div className="w-full h-60 md:h-80 overflow-hidden rounded-lg md:rounded-2xl">
-                <img
-                  src={category.image}
-                  alt={category.title}
-                  className="w-full h-full object-cover transition-transform duration-300 transform hover:scale-105"
-                />
+          {CATEGORIES_IMAGES.map((category, index) => (
+            <Link href="/shop" key={index}>
+              <div key={index} className="flex flex-col px-2 mt-5 md:mt-0 bg-gray-200 py-2 border border-gray-300 rounded-lg shadow-sm">
+                {/* Image container with rounded corners, shadow, and background color */}
+                <div className="w-full h-60 md:h-80 overflow-hidden rounded-lg md:rounded-2xl bg-white">
+                  <img
+                    src={category.image}
+                    alt={category.title}
+                    className="w-full h-full object-cover transition-transform duration-300 transform hover:scale-105 rounded-lg md:rounded-2xl"
+                  />
+                </div>
+                <h3 className="font-bold text-gray-900 mt-4 text-xl">
+                  {category.title}
+                </h3>
+                <p className="text-red-700 font-yellowtail text-xl">{category.subtitle}</p>
               </div>
-              <h3 className="font-bold text-green-900 mt-4 text-2xl">
-                {category.title}
-              </h3>
-              <p className="text-green-400 font-yellowtail text-xl">{category.subtitle}</p>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

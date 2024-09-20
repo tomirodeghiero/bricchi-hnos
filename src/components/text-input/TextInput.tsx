@@ -12,7 +12,7 @@ const TextInput = ({
 
   return (
     <div className="flex flex-col">
-      <label htmlFor={name} className="mb-2 text-green-900 font-medium">
+      <label htmlFor={name} className="mb-2 text-gray-900 font-medium">
         {label}
       </label>
       <InputOrTextarea

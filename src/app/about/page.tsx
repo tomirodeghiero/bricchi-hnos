@@ -2,10 +2,12 @@ import React from "react";
 import Link from "next/link";
 import HeaderBackground from "@/components/header-background/HeaderBackground";
 import { BRICCHI_HNOS_BACKGROUND } from "@/utils/assets/images";
-import { GO_TO_SHOP } from "@/utils/constants/services";
+import { GO_TO_SHOP, SERVICES_IMAGES } from "@/utils/constants/services";
 import { ABOUT_01, ABOUT_02 } from "@/utils/constants/about";
 import { CIRCLE, SPARE_PARTS, TRACTOR } from "@/utils/assets/icons/icons";
 import { IMAGE_01, IMAGE_02, IMAGE_03, IMAGE_04 } from "@/utils/assets/categories/categories";
+import { FaTractor, FaWrench } from "react-icons/fa";
+import ButtonUI from "@/components/buttons/ButtonUI";
 
 const About = () => {
   const categories = [
@@ -26,24 +28,7 @@ const About = () => {
     },
   ];
 
-  const services = [
-    {
-      title: "Tractores",
-      image: IMAGE_01,
-    },
-    {
-      title: "Cosechadoras",
-      image: IMAGE_02,
-    },
-    {
-      title: "Sembradoras",
-      image: IMAGE_03,
-    },
-    {
-      title: "Pulverizadoras",
-      image: IMAGE_04,
-    },
-  ];
+
 
   return (
     <div>
@@ -60,10 +45,10 @@ const About = () => {
           </div>
 
           <div className="w-full lg:w-1/2 md:mt-10 px-4 lg:px-0" data-aos="fade-left">
-            <h1 className="font-yellowtail text-green-400 text-2xl font-medium mb-1">
+            <h1 className="font-yellowtail text-red-500 text-2xl font-medium mb-1">
               Acerca de Nosotros
             </h1>
-            <h2 className="text-3xl font-semibold text-green-900">
+            <h2 className="text-3xl font-semibold text-gray-900">
               Comercializamos Maquinarias Diseñadas Para El Éxito
             </h2>
             <p className="text-gray-800 text-sm mt-2">
@@ -73,22 +58,21 @@ const About = () => {
               Nuestro compromiso es brindar equipos de alta calidad que se adapten a las necesidades específicas de cada cliente, garantizando rendimiento y durabilidad en cada uso.
             </p>
             <div className="flex justify-between mt-4">
-              <div className="flex items-center gap-2">
-                <img src={TRACTOR} alt="Icono Maquinaria Agrícola" className="w-10 h-10" />
-                <h3 className="text-green-900 font-medium leading-4">Maquinaria Agrícola Moderna</h3>
+              <div className="flex items-center gap-3">
+                <FaTractor className="w-8 h-8 text-red-500" />
+                <h3 className="text-gray-900 font-medium leading-4">Maquinaria Agrícola Moderna</h3>
               </div>
-              <div className="flex items-center gap-2">
-                <img src={SPARE_PARTS} alt="Icono Maquinaria Agrícola" className="w-10 h-10" />
-                <h3 className="text-green-900 font-medium leading-4">Repuestos Para El Campo</h3>
+              <div className="flex items-center gap-3">
+                <FaWrench className="w-6 h-6 text-red-500" />
+                <h3 className="text-gray-900 font-medium leading-4">Repuestos Para El Campo</h3>
               </div>
             </div>
 
-            <Link href="/shop">
-              <button className="bg-green-900 mx-auto md:mx-0 my-8 hover:bg-white border border-green-900 font-medium focus:outline-none focus:ring-1 focus:ring-green-600 focus:ring-opacity-50 transition duration-300 ease-in-out transform hover:shadow-md hover:-translate-y-1 rounded-2xl text-white hover:text-green-900 px-6 py-3 flex items-center">
-                Explorar más en la Tienda
-                <img src={GO_TO_SHOP} alt="Ir a la Tienda" className="w-5 h-5 ml-2" />
-              </button>
-            </Link>
+            <div className="my-7">
+              <Link href="/shop">
+                <ButtonUI text="Explorar más en la Tienda" />
+              </Link>
+            </div>
           </div>
         </div>
 
@@ -96,10 +80,10 @@ const About = () => {
           <div className="flex mx-auto gap-20 py-10" data-os="fade-up">
             <div className="flex flex-col md:flex-row mx-auto gap-2 md:gap-20 max-w-5xl">
               <div className="w-full md:w-1/2 px-4 lg:px-0">
-                <h1 className="font-yellowtail text-green-400 text-2xl font-medium mb-1">
+                <h1 className="font-yellowtail text-red-500 text-2xl font-medium mb-1">
                   ¿Por qué elegirnos?
                 </h1>
-                <h2 className="text-3xl font-semibold text-green-900">
+                <h2 className="text-3xl font-semibold text-gray-900">
                   Proveemos Directamente <br /> Desde El Fabricante
                 </h2>
                 <p className="text-gray-800 text-sm mt-2">
@@ -111,7 +95,7 @@ const About = () => {
                     <div className="mb-4">
                       <div className="inline-flex px-4 py-2 w-64 rounded-full items-center bg-slate-100">
                         <img src={CIRCLE} alt="Icono Maquinaria Agrícola" className="w-3 h-3 mr-2" />
-                        <h3 className="font-medium text-green-900">Productos 100% Original</h3>
+                        <h3 className="font-medium text-gray-900">Productos 100% Original</h3>
                       </div>
                       <p className="text-sm text-gray-800 mt-2 ml-12">
                         Garantizamos que todas nuestras maquinarias y repuestos son originales y de la más alta calidad.
@@ -123,7 +107,7 @@ const About = () => {
                     <div className="mb-4">
                       <div className="inline-flex px-4 py-2 w-64 rounded-full items-center bg-slate-100">
                         <img src={CIRCLE} alt="Icono Maquinaria Agrícola" className="w-3 h-3 mr-2" />
-                        <h3 className="font-medium text-green-900">Aumenta la Eficiencia</h3>
+                        <h3 className="font-medium text-gray-900">Aumenta la Eficiencia</h3>
                       </div>
                       <p className="text-sm text-gray-800 mt-2 ml-12">
                         Nuestras máquinas están diseñadas para aumentar la eficiencia y productividad en tus operaciones agrícolas.
@@ -141,10 +125,10 @@ const About = () => {
         </div>
 
         <div className="max-w-5xl mx-auto my-10 px-4 lg:px-0" data-aos="fade-up">
-          <h2 className="font-yellowtail text-green-400 text-2xl font-medium text-center mb-1">
+          <h2 className="font-yellowtail text-red-500 text-2xl font-medium text-center mb-1">
             Áreas
           </h2>
-          <h3 className="text-3xl font-semibold text-center text-green-900">
+          <h3 className="text-3xl font-semibold text-center text-gray-900">
             Nuestras Especialidades en el Campo
           </h3>
           <p className="text-base text-gray-800 mt-2 text-center">
@@ -154,7 +138,7 @@ const About = () => {
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-5" data-aos="fade-up">
-            {categories.map((category, index) => (
+            {SERVICES_IMAGES.slice(1).map((category, index) => (
               <div key={index} className="flex flex-col bg-gray-200 rounded-b-2xl" data-aos="zoom-in">
                 <div className="w-full h-80 overflow-hidden rounded-t-2xl">
                   <img
@@ -163,33 +147,33 @@ const About = () => {
                     className="w-full h-full object-cover transition-transform duration-300 transform hover:scale-105"
                   />
                 </div>
-                <h3 className="font-bold text-green-900 mt-4 text-2xl px-4">{category.title}</h3>
-                <p className="text-green-400 font-yellowtail text-xl px-4 pb-4">{category.subtitle}</p>
+                <h3 className="font-bold text-gray-900 mt-4 text-2xl px-4">{category.title}</h3>
+                <p className="text-red-700 font-yellowtail text-xl px-4 pb-4">{category.subtitle}</p>
               </div>
             ))}
           </div>
         </div>
 
-        <div className="bg-green-900 py-10">
+        <div className="bg-gray-200 py-10">
           <div className="max-w-5xl mx-auto px-4 lg:px-0">
-            <h2 className="font-yellowtail text-green-400 text-2xl font-medium text-center mb-1">
+            <h2 className="font-yellowtail text-red-500 text-2xl font-medium text-center mb-1">
               Acerca de Nosotros
             </h2>
-            <h3 className="text-3xl font-semibold text-center text-white">
+            <h3 className="text-3xl font-semibold text-center text-gray-900">
               Lo Que Ofrecemos Para Su Empresa
             </h3>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-5">
-              {services.map((service, index) => (
+              {SERVICES_IMAGES.map((service, index) => (
                 <div key={index} className="flex flex-col rounded-b-2xl" data-aos="zoom-up">
                   <div className="w-full overflow-hidden rounded-[1.5rem]">
                     <img
                       src={service.image}
                       alt={service.title}
-                      className="w-full h-full object-cover transition-transform duration-300 transform hover:scale-105"
+                      className="w-full h-60 object-cover transition-transform duration-300 transform hover:scale-105"
                     />
                   </div>
-                  <h3 className="font-medium text-white mt-2 text-center text-xl px-4">
+                  <h3 className="font-medium text-gray-900 mt-2 text-center text-xl px-4">
                     {service.title}
                   </h3>
                 </div>

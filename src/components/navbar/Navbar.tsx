@@ -248,19 +248,12 @@ export default function Navbar() {
       </div>
 
       <div className="relative flex items-center">
-        <div className="relative">
-          <input
-            type="text"
-            className="bg-gray-100 border border-gray-200 w-full p-2 pl-4 pr-12 rounded-full focus:outline-none"
-            placeholder=""
-          />
-          <button
-            type="submit"
-            className="absolute right-0 top-0 mt-1.5 mr-1.5 h-8 w-8 bg-green-400 text-white rounded-full flex items-center justify-center"
-          >
-            <FaSearch className="h-4 w-4" />
-          </button>
-        </div>
+        <button
+          type="button"
+          className="ml-4 h-10 w-10 bg-green-400 text-white rounded-full flex items-center justify-center"
+        >
+          <FaSearch className="h-4 w-4" />
+        </button>
 
         <button
           type="button"

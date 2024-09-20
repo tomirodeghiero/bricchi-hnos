@@ -30,7 +30,7 @@ const Footer = () => {
             {/* Contact Section */}
             <div className="mx-auto gap-14">
               <div className="space-y-4 text-gray-800 font-open-sans text-[0.9rem]">
-                <h5 className="text-green-900 font-bold text-xl mb-4">Contáctanos</h5>
+                <h5 className="text-gray-900 font-bold text-xl mb-4">Contáctanos</h5>
                 <p className="text-gray-800 mb-1 text-[0.9rem]"><strong>Email: <span className="font-normal mb-5 text-[0.9rem]">ventas@briccihnos.com</span></strong></p>
                 <p className="text-gray-800 mb-1 text-[0.9rem]"><strong>Teléfono: <span className="font-normal mb-5 text-[0.9rem]">+54 9 3586214-729</span></strong></p>
                 <p className="text-gray-800 mb-1 text-[0.9rem]"><strong>Dirección: <span className="font-normal mb-5 text-[0.9rem]">Ruta A005 km 1.2, Río Cuarto</span></strong></p>
@@ -38,7 +38,7 @@ const Footer = () => {
 
               {/* Links Section */}
               <div className="flex flex-col  mt-8">
-                <h5 className="text-green-900 font-bold text-xl mb-4">Enlaces</h5>
+                <h5 className="text-gray-900 font-bold text-xl mb-4">Enlaces</h5>
                 <ul className="grid grid-cols-2 gap-5 md:grid-cols-1 text-gray-800 font-open-sans text-[0.9rem]">
                   <li><Link href="#" className="hover:text-gray-800">Inicio</Link></li>
                   <li><Link href="#" className="hover:text-gray-800">Empresa</Link></li>
@@ -66,7 +66,7 @@ const Footer = () => {
           <div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left border-b border-gray-400 py-8">
             {/* Contact Section */}
             <div className="flex flex-col items-center md:items-end md:col-span-1">
-              <h5 className="text-green-900 font-bold text-xl mb-4">Contáctanos</h5>
+              <h5 className="text-gray-900 font-bold text-xl mb-4">Contáctanos</h5>
               <p className="text-gray-800 mb-1 text-[0.9rem]"><strong>Email</strong></p>
               <p className="text-gray-800 mb-5 text-[0.9rem]">ventas@briccihnos.com</p>
               <p className="text-gray-800 mb-1 text-[0.9rem]"><strong>Teléfono</strong></p>
@@ -90,7 +90,7 @@ const Footer = () => {
             </div>
             {/* Links Section */}
             <div className="flex flex-col items-center md:items-start md:col-span-1">
-              <h5 className="text-green-900 font-bold text-xl mb-4">Enlaces</h5>
+              <h5 className="text-gray-900 font-bold text-xl mb-4">Enlaces</h5>
               <ul className="space-y-4 text-gray-800 font-open-sans text-[0.9rem]">
                 <li><Link href="#" className="hover:text-gray-800">Inicio</Link></li>
                 <li><Link href="#" className="hover:text-gray-800">Empresa</Link></li>

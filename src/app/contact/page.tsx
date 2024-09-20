@@ -8,6 +8,7 @@ import { CONTACT, CONTACT_BACKGROUND } from '@/utils/assets/contact/contact';
 import { EMAIL, FACEBOOK, INSTAGRAM, LOCATION, TELEPHONE } from '@/utils/assets/icons/icons';
 import { BRICCHI_HNOS_BACKGROUND } from '@/utils/assets/images';
 import { FACEBOOK_URL, INSTAGRAM_URL, PHONE_NUMBER } from '@/utils/constants/constants';
+import ButtonUI from '@/components/buttons/ButtonUI';
 
 const ContactPage = () => {
   const handleClickToWhatsApp = () => {
@@ -24,14 +25,14 @@ const ContactPage = () => {
         title="Contáctanos"
         subtitle="Inicio - Contacto"
       />
-      <div className='max-w-5xl mx-auto'>
+      <div className='max-w-5xl mx-auto mt-8'>
         <div className='flex flex-col p-4 lg:p-0 lg:flex-row gap-4'>
           <div className='flex w-full lg:w-1/2 mx-auto gap-5'>
             <img data-aos="fade-right" src={CONTACT} className='h-3/4 lg:h-full w-full object-cover rounded-3xl' />
           </div>
 
           <div className="w-full lg:w-1/2 lg:pl-4 mx-auto py-8" data-aos="fade-left">
-            <h1 className="text-green-900 text-3xl font-semibold leading-[2.25rem]">Tu consulta es importante para nosotros.</h1>
+            <h1 className="text-gray-900 text-3xl font-semibold leading-[2.25rem]">Tu consulta es importante para nosotros.</h1>
             <p className="text-gray-800 font-family-jost mt-2 leading-[1.5rem] font-open-sans">
               ¿Tenés alguna consulta o querés más información sobre nuestros productos y servicios? No dudes en contactarnos. Nuestro equipo está listo para asistirte y encontrar la mejor solución para vos. <span className='font-medium'>¡Escribinos y empecemos a trabajar juntos!</span>
             </p>
@@ -42,7 +43,7 @@ const ContactPage = () => {
                   <img src={EMAIL} alt="E-mail" className="h-16" />
                 </div>
                 <div className="ml-4">
-                  <p className="text-lg font-semibold text-green-900">Mensaje</p>
+                  <p className="text-lg font-semibold text-gray-900">Mensaje</p>
                   <p className="text-gray-800">bricchihnos@gmail.com</p>
                 </div>
               </Link>
@@ -51,7 +52,7 @@ const ContactPage = () => {
                   <img src={TELEPHONE} alt="E-mail" className="h-16" />
                 </div>
                 <div className="ml-4">
-                  <p className="text-lg font-semibold text-green-900">Teléfono</p>
+                  <p className="text-lg font-semibold text-gray-900">Teléfono</p>
                   <p className="text-gray-800">+54 9 3586214-729</p>
                 </div>
               </div>
@@ -60,7 +61,7 @@ const ContactPage = () => {
             <div className="hidden lg:flex font-family-jost items-center mt-6">
               <Link href={INSTAGRAM_URL} target='_blank'>
                 <img
-                  className="hover-lift h-10 w-10 mx-2"
+                  className="hover-lift h-14 w-14 mx-2"
                   src={INSTAGRAM}
                   alt="Instagram Icon"
                 />
@@ -68,7 +69,7 @@ const ContactPage = () => {
 
               <Link href={FACEBOOK_URL} target='_blank'>
                 <img
-                  className="hover-lift h-10 w-10 mx-2"
+                  className="hover-lift h-14 w-14 mx-2"
                   src={FACEBOOK}
                   alt="Facebook Icon"
                 />
@@ -86,8 +87,8 @@ const ContactPage = () => {
         />
         <div className="relative w-full flex justify-end">
           <div className="p-8 max-w-[30rem] bg-white bg-opacity-90 rounded-xl shadow-lg m-8">
-            <h4 className="text-green-400 font-yellowtail text-2xl">Ubicación</h4>
-            <h2 className="text-3xl font-bold text-green-900">Nuestra Sucursal</h2>
+            <h4 className="text-red-500 font-yellowtail text-2xl">Ubicación</h4>
+            <h2 className="text-3xl font-bold text-gray-900">Nuestra Sucursal</h2>
             <p className="text-gray-800 mt-2 font-open-sans">
               Encuentra nuestra sucursal donde ofrecemos las mejores soluciones en maquinaria agrícola y repuestos. Visítanos para descubrir cómo podemos ayudarte a mejorar la productividad y eficiencia de tu campo.
             </p>
@@ -98,8 +99,8 @@ const ContactPage = () => {
                 alt="Location Icon"
               />
               <div>
-                <p className="font-semibold">Río Cuarto, Argentina</p>
-                <p className="text-gray-600">Ruta A005 km 1.2, Río Cuarto, Córdoba</p>
+                <p className="font-semibold text-gray-900">Río Cuarto, Argentina</p>
+                <p className="text-gray-800">Ruta A005 km 1.2, Río Cuarto, Córdoba</p>
               </div>
             </div>
           </div>

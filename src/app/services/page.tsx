@@ -14,13 +14,13 @@ const Services = () => {
         subtitle="Inicio - Servicios"
       />
       <div className="max-w-5xl mx-auto mt-10 px-4 lg:px-0">
-        <h1 className="font-yellowtail text-green-400 text-2xl font-medium text-center mb-1">
+        <h1 className="font-yellowtail text-red-500 text-2xl font-medium text-center mb-1">
           Nuestro Compromiso
         </h1>
-        <h2 className="text-3xl font-semibold text-center text-green-900">
+        <h2 className="text-3xl font-semibold text-center text-gray-900">
           Agricultura Innovadora Para
         </h2>
-        <h2 className="text-3xl font-semibold mb-5 text-center text-green-900">
+        <h2 className="text-3xl font-semibold mb-5 text-center text-gray-900">
           Un Futuro Mejor
         </h2>
 
@@ -30,14 +30,14 @@ const Services = () => {
             <div className="flex flex-col items-center md:items-end space-x-4">
               <Image src={SERVICE_01} alt="Icono Entrega Rápida" width={32} height={32} />
               <div>
-                <h3 className="font-semibold text-green-900 text-center md:text-end my-1">Entrega Rápida</h3>
+                <h3 className="font-semibold text-gray-900 text-center md:text-end my-1">Entrega Rápida</h3>
                 <p className="text-gray-800 font-open-sans text-center md:text-end text-[0.9rem]">Logística eficiente para asegurar que tus pedidos lleguen a tiempo, utilizando sistemas avanzados de gestión de inventario.</p>
               </div>
             </div>
             <div className="flex flex-col items-center md:items-end space-x-4">
               <Image src={SERVICE_02} alt="Icono Venta" width={32} height={32} />
               <div>
-                <h3 className="font-semibold text-green-900 text-center md:text-end my-1">Venta</h3>
+                <h3 className="font-semibold text-gray-900 text-center md:text-end my-1">Venta</h3>
                 <p className="text-gray-800 font-open-sans text-center md:text-end text-[0.9rem]">
                   Nuestro equipo de ventas está listo para asesorarte en la elección de la maquinaria que mejor se adapte a tus necesidades. Contamos con una amplia gama de financiamiento para facilitar tu compra.
                 </p>
@@ -46,7 +46,7 @@ const Services = () => {
             <div className="flex flex-col items-center md:items-end space-x-4">
               <Image src={SERVICE_03} alt="Icono Post Venta" width={32} height={32} />
               <div>
-                <h3 className="font-semibold text-green-900 text-center md:text-end my-1">Post Venta</h3>
+                <h3 className="font-semibold text-gray-900 text-center md:text-end my-1">Post Venta</h3>
                 <p className="text-gray-800 font-open-sans text-center md:text-end text-[0.9rem]">
                   Estamos con vos en cada paso. Nuestro servicio de post venta asegura el mantenimiento y soporte que tu maquinaria necesita para seguir rindiendo al máximo.
                 </p>
@@ -64,21 +64,21 @@ const Services = () => {
             <div className="flex flex-col items-center md:items-start mt-5 md:mt-0">
               <Image src={SERVICE_04} alt="Icono de Agricultura de Precisición" width={32} height={32} />
               <div>
-                <h3 className="font-semibold text-center md:text-start text-green-900 my-1">Agricultura de Precisición</h3>
+                <h3 className="font-semibold text-center md:text-start text-gray-900 my-1">Agricultura de Precisición</h3>
                 <p className="text-gray-800 font-open-sans text-center md:text-start text-[0.9rem]">Maximizá tu rendimiento con nuestras soluciones de agricultura de precisión. Tecnología avanzada para decisiones más informadas.</p>
               </div>
             </div>
             <div className="flex flex-col items-center md:items-start">
               <Image src={SERVICE_05} alt="Icono Servicio Técnico" width={32} height={32} />
               <div>
-                <h3 className="font-semibold text-center md:text-start text-green-900 my-1">Servicio Técnico</h3>
+                <h3 className="font-semibold text-center md:text-start text-gray-900 my-1">Servicio Técnico</h3>
                 <p className="text-gray-800 font-open-sans text-center md:text-start text-[0.9rem]">Mantené tu maquinaria en perfecto estado con nuestro servicio técnico especializado. Reparaciones rápidas y eficaces, donde y cuando lo necesites.</p>
               </div>
             </div>
             <div className="flex flex-col items-center md:items-start">
               <Image src={SERVICE_06} alt="Icono Flete" width={32} height={32} />
               <div>
-                <h3 className="font-semibold text-green-900 my-1 text-center md:text-start">Flete</h3>
+                <h3 className="font-semibold text-gray-900 my-1 text-center md:text-start">Flete</h3>
                 <p className="text-gray-800 font-open-sans text-center md:text-start text-[0.9rem]">Llevamos tu maquinaria hasta donde la necesites. Servicio de flete seguro y puntual, porque sabemos que tu tiempo es valioso.</p>
               </div>
             </div>
