@@ -74,7 +74,7 @@ const ProductsFilterSidebar = ({
           />
         </div>
 
-        <div className="flex flex-col gap-2 mt-3">
+        <div className="flex-col gap-2 mt-3 hidden md:flex">
           <button
             onClick={() => handleCategoryClick("")}
             className={`
@@ -163,7 +163,7 @@ const ShopPage = () => {
 
     try {
       const response = await fetch(
-        `/api/products?page=1&limit=200`,
+        `${process.env.BACKEND_URL}/api/products?page=1&limit=200`,
         requestOptions
       );
 
