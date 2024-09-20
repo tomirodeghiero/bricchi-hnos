@@ -2,7 +2,7 @@
 
 import HeaderBackground from "@/components/header-background/HeaderBackground";
 import { BRICCHI_HNOS_BACKGROUND } from "@/utils/assets/images";
-import React, { useEffect, useState } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import Features from "@/components/features/Features";
 import Image from "next/image";
@@ -334,4 +334,12 @@ const ShopPage = () => {
   );
 };
 
-export default ShopPage;
+const Shop = () => {
+  return (
+    <Suspense>
+      <ShopPage />
+    </Suspense>
+  );
+};
+
+export default Shop;
