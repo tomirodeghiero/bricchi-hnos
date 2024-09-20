@@ -4,8 +4,8 @@ import { useEffect, useRef, useState } from "react";
 import { Carousel } from "react-responsive-carousel";
 import { ToastContainer, toast } from "react-toastify";
 
-export default function ShopPage({ params }) {
-  const [productID, setProductID] = useState(null);
+export default function ShopPage({ params }: any) {
+  const [productID, setProductID] = useState<any>(null);
   const [productAdded, setProductAdded] = useState(false);
 
   useEffect(() => {
@@ -70,7 +70,7 @@ export default function ShopPage({ params }) {
       {productID.manuals.length > 0 && (
         <div>
           <h2>Manuales</h2>
-          {productID.manuals.map((manual, index) => (
+          {productID.manuals.map((manual: any, index: number) => (
             <a key={index} href={manual.url} download>
               {manual.file_name}
             </a>
