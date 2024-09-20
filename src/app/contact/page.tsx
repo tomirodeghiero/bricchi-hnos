@@ -86,7 +86,7 @@ const ContactPage = () => {
           className="absolute inset-0 w-full h-full object-cover object-bottom"
         />
         <div className="relative w-full flex justify-end">
-          <div className="p-8 max-w-[30rem] bg-white bg-opacity-90 rounded-xl shadow-lg m-8">
+          <div className="p-8 max-w-[30rem] bg-white bg-opacity-90 md:rounded-xl shadow-lg m-8">
             <h4 className="text-red-500 font-yellowtail text-2xl">Ubicación</h4>
             <h2 className="text-3xl font-bold text-gray-900">Nuestra Sucursal</h2>
             <p className="text-gray-800 mt-2 font-open-sans">
