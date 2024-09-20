@@ -12,7 +12,7 @@ export default function ShopPage({ params }: any) {
     // Fetch product data by ID
     const fetchProduct = async () => {
       try {
-        const res = await fetch(`http://127.0.0.1:5001/api/product/${params.id}`);
+        const res = await fetch(`${process.env.BACKEND_URL}/api/product/${params.id}`);
         if (!res.ok) throw new Error("Error fetching product");
         const data = await res.json();
         setProductID(data);

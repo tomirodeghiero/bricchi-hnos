@@ -142,7 +142,7 @@ const ShopPage = () => {
   // Obtener las categorías del backend
   async function getCategories() {
     try {
-      const response = await fetch('http://127.0.0.1:5001/api/categories');
+      const response = await fetch(`${process.env.BACKEND_URL}/api/categories`);
       const data = await response.json();
 
       setCategories(data.categories);
@@ -163,7 +163,7 @@ const ShopPage = () => {
 
     try {
       const response = await fetch(
-        `http://127.0.0.1:5001/api/products?page=1&limit=200`,
+        `${process.env.BACKEND_URL}/api/products?page=1&limit=200`,
         requestOptions
       );
 
@@ -336,9 +336,9 @@ const ShopPage = () => {
 
 const Shop = () => {
   return (
-    <Suspense fallback={<div>Cargando...</div>}>
+    <Suspense>
       <ShopPage />
-    </Suspense >
+    </Suspense>
   );
 };
 
