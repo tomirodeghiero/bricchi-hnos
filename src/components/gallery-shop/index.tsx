@@ -83,19 +83,19 @@ const GalleryItemPlaceholder = () => (
 export const GalleryItem = ({ src, title, id, category }: any) => {
     const imageHeight = 'h-72 lg:h-96';
     return (
-        <Link className="w-full flex flex-col rounded-lg p-2 hover:shadow-lg transition-shadow duration-200" href={`/product/${id}`}>
+        // <Link className="w-full flex flex-col rounded-lg p-2 hover:shadow-lg transition-shadow duration-200" href={`/product/${id}`}>
+        <>
             <div className={`w-full overflow-hidden rounded-lg ${imageHeight}`}>
                 <img src={src} alt={title} className="w-full h-full object-cover" />
             </div>
             <div className="text-center p-4 lg:mt-2 flex justify-between items-center">
                 <div className="text-left w-full">
-                    {/* Limitar el título con puntos suspensivos si es demasiado largo */}
                     <p className="text-xl font-semibold text-green-900 font-open-sans overflow-hidden text-ellipsis whitespace-nowrap">{title}</p>
-                    {/* Limitar la categoría de la misma manera */}
                     <p className="text-red-700 text-lg font-yellowtail overflow-hidden text-ellipsis whitespace-nowrap">{category}</p>
                 </div>
             </div>
-        </Link>
+        </>
+        // </Link> */
     );
 };
 
