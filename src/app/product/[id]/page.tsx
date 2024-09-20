@@ -41,7 +41,7 @@ export default function ShopPage({ params }: any) {
         <div>
           <img src={productID.mainImageUrl} alt={productID.name} />
         </div>
-        {productID.secondaryImageUrls?.map((url, index) => (
+        {productID.secondaryImageUrls?.map((url: any, index: number) => (
           <div key={index}>
             <img src={url} alt={`Imagen secundaria ${index}`} />
           </div>
