@@ -2,34 +2,14 @@ import React from "react";
 import Link from "next/link";
 import HeaderBackground from "@/components/header-background/HeaderBackground";
 import { BRICCHI_HNOS_BACKGROUND } from "@/utils/assets/images";
-import { GO_TO_SHOP, SERVICES_IMAGES, SERVICES_IMAGES_02 } from "@/utils/constants/services";
+import { SERVICES_IMAGES, SERVICES_IMAGES_02 } from "@/utils/constants/services";
 import { ABOUT_01, ABOUT_02 } from "@/utils/constants/about";
-import { CIRCLE, SPARE_PARTS, TRACTOR } from "@/utils/assets/icons/icons";
-import { IMAGE_01, IMAGE_02, IMAGE_03, IMAGE_04 } from "@/utils/assets/categories/categories";
+import { CIRCLE } from "@/utils/assets/icons/icons";
+import { IMAGE_01, IMAGE_02, IMAGE_03 } from "@/utils/assets/categories/categories";
 import { FaTractor, FaWrench } from "react-icons/fa";
 import ButtonUI from "@/components/buttons/ButtonUI";
 
 const About = () => {
-  const categories = [
-    {
-      title: "Tractores",
-      subtitle: "Máquinas potentes",
-      image: IMAGE_01,
-    },
-    {
-      title: "Cosechadoras",
-      subtitle: "Recolección eficiente",
-      image: IMAGE_02,
-    },
-    {
-      title: "Sembradoras",
-      subtitle: "Siembra precisa",
-      image: IMAGE_03,
-    },
-  ];
-
-
-
   return (
     <div>
       <HeaderBackground

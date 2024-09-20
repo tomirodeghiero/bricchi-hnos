@@ -1,3 +1,4 @@
+import { SECONDARY_IMAGE_01, SECONDARY_IMAGE_02, SECONDARY_IMAGE_03 } from "@/utils/assets/categories/categories";
 export const SERVICES = "/assets/services/services.png";
 export const SERVICE_01 = "/assets/services/service-01.png";
 export const SERVICE_02 = "/assets/services/service-02.png";
@@ -7,7 +8,6 @@ export const SERVICE_05 = "/assets/services/service-05.png";
 export const SERVICE_06 = "/assets/services/service-06.png";
 export const GO_TO_SHOP = "/assets/services/go-to-shop.png";
 export const BACKGROUND = "/assets/services/background.png";
-import { SECONDARY_IMAGE_01, SECONDARY_IMAGE_02, SECONDARY_IMAGE_03 } from "@/utils/assets/categories/categories";
 
 export const SERVICES_IMAGES = [
   {
