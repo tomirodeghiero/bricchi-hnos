@@ -84,7 +84,7 @@ export const GalleryItem = ({ src, title, id, category }: any) => {
     const imageHeight = 'h-72 lg:h-96';
     return (
         // <Link className="w-full flex flex-col rounded-lg p-2 hover:shadow-lg transition-shadow duration-200" href={`/product/${id}`}>
-        <>
+        <div className="w-full flex flex-col rounded-lg p-2 hover:shadow-lg transition-shadow duration-200" href={`/product/${id}`}>
             <div className={`w-full overflow-hidden rounded-lg ${imageHeight}`}>
                 <img src={src} alt={title} className="w-full h-full object-cover" />
             </div>
@@ -94,7 +94,7 @@ export const GalleryItem = ({ src, title, id, category }: any) => {
                     <p className="text-red-700 text-lg font-yellowtail overflow-hidden text-ellipsis whitespace-nowrap">{category}</p>
                 </div>
             </div>
-        </>
+        </div>
         // </Link> */
     );
 };
