@@ -44,7 +44,7 @@ const ContactPage = () => {
                 </div>
                 <div className="ml-4">
                   <p className="text-lg font-semibold text-gray-900">Mensaje</p>
-                  <p className="text-gray-800">bricchihnos@gmail.com</p>
+                  <p className="text-gray-800">ventas@briccihnos.com</p>
                 </div>
               </Link>
               <div onClick={handleClickToWhatsApp} className="cursor-pointer flex p-2 items-center rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-200 border border-gray-300">
@@ -53,7 +53,7 @@ const ContactPage = () => {
                 </div>
                 <div className="ml-4">
                   <p className="text-lg font-semibold text-gray-900">Teléfono</p>
-                  <p className="text-gray-800">+54 9 3586214-729</p>
+                  <p className="text-gray-800">+54 9 3584854418</p>
                 </div>
               </div>
             </div>

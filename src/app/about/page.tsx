@@ -144,7 +144,7 @@ const About = () => {
             </h3>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-5">
-              {SERVICES_IMAGES_02.map((service, index) => (
+              {SERVICES_IMAGES.map((service, index) => (
                 <div key={index} className="flex flex-col rounded-b-2xl" data-aos="zoom-up">
                   <div className="w-full overflow-hidden rounded-[1.5rem]">
                     <img

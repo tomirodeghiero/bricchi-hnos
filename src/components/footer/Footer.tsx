@@ -32,7 +32,7 @@ const Footer = () => {
               <div className="space-y-4 text-gray-800 font-open-sans text-[0.9rem]">
                 <h5 className="text-gray-900 font-bold text-xl mb-4">Contáctanos</h5>
                 <p className="text-gray-800 mb-1 text-[0.9rem]"><strong>Email: <span className="font-normal mb-5 text-[0.9rem]">ventas@briccihnos.com</span></strong></p>
-                <p className="text-gray-800 mb-1 text-[0.9rem]"><strong>Teléfono: <span className="font-normal mb-5 text-[0.9rem]">+54 9 3586214-729</span></strong></p>
+                <p className="text-gray-800 mb-1 text-[0.9rem]"><strong>Teléfono: <span className="font-normal mb-5 text-[0.9rem]">+54 9 3584854418</span></strong></p>
                 <p className="text-gray-800 mb-1 text-[0.9rem]"><strong>Dirección: <span className="font-normal mb-5 text-[0.9rem]">Ruta A005 km 1.2, Río Cuarto</span></strong></p>
               </div>
 
@@ -70,7 +70,7 @@ const Footer = () => {
               <p className="text-gray-800 mb-1 text-[0.9rem]"><strong>Email</strong></p>
               <p className="text-gray-800 mb-5 text-[0.9rem]">ventas@briccihnos.com</p>
               <p className="text-gray-800 mb-1 text-[0.9rem]"><strong>Teléfono</strong></p>
-              <p className="text-gray-800 mb-5 text-[0.9rem]">+54 9 3586214-729</p>
+              <p className="text-gray-800 mb-5 text-[0.9rem]">+54 9 3584854418</p>
               <p className="text-gray-800 mb-1 text-[0.9rem]"><strong>Dirección</strong></p>
               <p className="text-gray-800 text-[0.9rem]">Ruta A005 km 1.2, Río Cuarto</p>
               <p className="text-gray-800 text-[0.9rem]">Córdoba, Argentina</p>
