@@ -6,7 +6,7 @@ import { PHONE_NUMBER } from "@/utils/constants/constants";
 
 const WhatsApp = () => {
   const message =
-    "Hola, estoy interesado en ";
+    "Hola! Estoy interesado en ";
 
   const handleClick = () => {
     window.open(
