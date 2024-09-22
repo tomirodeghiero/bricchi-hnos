@@ -1,11 +1,10 @@
-import { GalleryItem } from "@/components/gallery-shop";
-import { QUALITY, STANDARD } from "@/utils/assets/icons/icons";
-import { BACKGROUND_STATISTICS, CAMP, COMPANIES, HERO, HOME_01, HOME_02, HOME_03, STATISTICS } from "@/utils/constants/home";
-import { GO_TO_SHOP, SERVICES_IMAGES } from "@/utils/constants/services";
 import Link from "next/link";
-import { IMAGE_01, IMAGE_02, IMAGE_03, IMAGE_04 } from "@/utils/assets/categories/categories";
 import ButtonUI from "@/components/buttons/ButtonUI";
-import { FaTools, FaCertificate, FaCheckCircle } from "react-icons/fa"
+import { FaTools, FaCheckCircle } from "react-icons/fa"
+import { GalleryItem } from "@/components/gallery-shop";
+import { SERVICES_IMAGES } from "@/utils/constants/services";
+import { IMAGE_01, IMAGE_02, IMAGE_03 } from "@/utils/assets/categories/categories";
+import { BACKGROUND_STATISTICS, CAMP, COMPANIES, HERO, HOME_01, HOME_02, HOME_03, STATISTICS } from "@/utils/constants/home";
 
 export default function Home() {
   const STATIC_PRODUCTS = [

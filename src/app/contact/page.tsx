@@ -8,7 +8,6 @@ import { CONTACT, CONTACT_BACKGROUND } from '@/utils/assets/contact/contact';
 import { EMAIL, FACEBOOK, INSTAGRAM, LOCATION, TELEPHONE } from '@/utils/assets/icons/icons';
 import { BRICCHI_HNOS_BACKGROUND } from '@/utils/assets/images';
 import { FACEBOOK_URL, INSTAGRAM_URL, PHONE_NUMBER } from '@/utils/constants/constants';
-import ButtonUI from '@/components/buttons/ButtonUI';
 
 const ContactPage = () => {
   const handleClickToWhatsApp = () => {
