@@ -3,73 +3,9 @@ import ButtonUI from "@/components/buttons/ButtonUI";
 import { FaTools, FaCheckCircle } from "react-icons/fa"
 import { GalleryItem } from "@/components/gallery-shop";
 import { SERVICES_IMAGES } from "@/utils/constants/services";
-import { IMAGE_01, IMAGE_02, IMAGE_03 } from "@/utils/assets/categories/categories";
-import { BACKGROUND_STATISTICS, CAMP, COMPANIES, HERO, HOME_01, HOME_02, HOME_03, STATISTICS } from "@/utils/constants/home";
+import { BACKGROUND_STATISTICS, CAMP, COMPANIES, HERO, HOME_01, HOME_02, HOME_03, STATIC_PRODUCTS, STATISTICS } from "@/utils/constants/home";
 
 export default function Home() {
-  const STATIC_PRODUCTS = [
-    {
-      id: 1,
-      src: '/assets/shop/01.png',
-      title: 'Minipala MP45',
-      category: 'Maquinaria Vial',
-      subcategory: 'Mini Palas',
-    },
-    {
-      id: 2,
-      src: '/assets/shop/02.png',
-      title: 'Stark 500/4',
-      category: 'Maquinaria Agrícola',
-      subcategory: 'Tractores',
-    },
-    {
-      id: 3,
-      src: '/assets/shop/03.png',
-      title: 'ME 25-45T',
-      category: 'Maquinaria Vial',
-      subcategory: 'Autoelevadores',
-    },
-    {
-      id: 4,
-      src: '/assets/shop/04.png',
-      title: 'Hanomag E143',
-      category: 'Maquinaria Vial',
-      subcategory: 'Pala Cargadoras',
-    },
-    {
-      id: 5,
-      src: '/assets/shop/05.png',
-      title: 'Minipala MP45',
-      category: 'Maquinaria Vial',
-      subcategory: 'Mini Palas',
-    },
-    {
-      id: 6,
-      src: '/assets/shop/06.png',
-      title: 'Stark 500/4',
-      category: 'Maquinaria Agrícola',
-      subcategory: 'Tractores',
-    },
-  ];
-
-  const categories = [
-    {
-      title: "Tractores",
-      subtitle: "Máquinas potentes",
-      image: IMAGE_01,
-    },
-    {
-      title: "Cosechadoras",
-      subtitle: "Recolección eficiente",
-      image: IMAGE_02,
-    },
-    {
-      title: "Sembradoras",
-      subtitle: "Siembra precisa",
-      image: IMAGE_03,
-    },
-  ];
-
   return (
     <main className="relative">
       <div className="relative">
