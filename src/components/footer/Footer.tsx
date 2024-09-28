@@ -1,4 +1,4 @@
-import { ARROW, FACEBOOK, INSTAGRAM } from "@/utils/assets/icons/icons";
+import { FACEBOOK, INSTAGRAM } from "@/utils/assets/icons/icons";
 import React from "react";
 import Link from "next/link";
 import { FACEBOOK_URL, INSTAGRAM_URL } from "@/utils/constants/constants";
