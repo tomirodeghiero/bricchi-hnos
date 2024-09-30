@@ -7,8 +7,8 @@ import Navbar from "@/components/navbar/Navbar";
 import Footer from "@/components/footer/Footer";
 import WhatsApp from "@/components/whatsapp/Whatsapp";
 
-import { CartProvider } from "@/context/CartContext";
 import { AOSInit } from "../../aos";
+import { CartProvider } from "@/context/CartContext";
 
 export const metadata: Metadata = {
   title: "Bricchi Hnos. S.A.",
