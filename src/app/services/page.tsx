@@ -1,7 +1,9 @@
 import React from "react";
 import Image from 'next/image';
 import Link from "next/link";
+
 import HeaderBackground from "@/components/header-background/HeaderBackground";
+
 import { BRICCHI_HNOS_BACKGROUND } from "@/utils/assets/images";
 import { GO_TO_SHOP, SERVICE_01, SERVICE_02, SERVICE_03, SERVICE_04, SERVICE_05, SERVICE_06, SERVICES } from "@/utils/constants/services";
 

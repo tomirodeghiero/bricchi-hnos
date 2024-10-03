@@ -1,17 +1,18 @@
 "use client";
 
-import HeaderBackground from "@/components/header-background/HeaderBackground";
-import { BRICCHI_HNOS_BACKGROUND } from "@/utils/assets/images";
-import React, { Suspense, useEffect, useState } from "react";
-import { useSearchParams } from "next/navigation";
-import Features from "@/components/features/Features";
 import Image from "next/image";
-import { DROP_RIGHT, NO_RESULTS, SEARCH } from "@/utils/assets/icons/icons";
-import SkeletonCard from "@/components/skeleton-card";
+import { useSearchParams } from "next/navigation";
 import { CSSTransition } from "react-transition-group";
-import { GalleryItem } from "@/components/gallery-shop";
+import React, { Suspense, useEffect, useState } from "react";
 
-// Componente de tags de subcategorías con selección múltiple
+import SkeletonCard from "@/components/skeleton-card";
+import Features from "@/components/features/Features";
+import { GalleryItem } from "@/components/gallery-shop";
+import HeaderBackground from "@/components/header-background/HeaderBackground";
+
+import { BRICCHI_HNOS_BACKGROUND } from "@/utils/assets/images";
+import { DROP_RIGHT, NO_RESULTS, SEARCH } from "@/utils/assets/icons/icons";
+
 const CategoryTags = ({ subcategories, selectedSubcategories, onToggleSubcategory }: any) => {
   return (
     <div className="flex flex-wrap gap-2">
@@ -32,7 +33,6 @@ const CategoryTags = ({ subcategories, selectedSubcategories, onToggleSubcategor
   );
 };
 
-// Sidebar para mostrar categorías y subcategorías con animación smooth y múltiples subcategorías seleccionables
 const ProductsFilterSidebar = ({
   searchQuery,
   onSearch,
@@ -46,18 +46,17 @@ const ProductsFilterSidebar = ({
 
   const handleCategoryClick = (categoryName: string) => {
     if (expandedCategory === categoryName) {
-      setExpandedCategory(null); // Colapsar la categoría si ya está expandida
+      setExpandedCategory(null);
     } else {
-      setExpandedCategory(categoryName); // Expandir la categoría seleccionada
+      setExpandedCategory(categoryName);
     }
     setSelectedCategory(categoryName);
-    onSortByCategory(categoryName); // Filtrar productos por categoría seleccionada
+    onSortByCategory(categoryName);
   };
 
   return (
     <div className="w-full lg:w-1/4 lg:flex lg:flex-col gap-5">
       <div className="mt-5">
-        {/* Búsqueda de categorías */}
         <div className="hidden lg:block lg:relative">
           <input
             type="text"
@@ -83,9 +82,8 @@ const ProductsFilterSidebar = ({
             Todas las Categorías
           </button>
 
-          {/* Filtrar solo las categorías principales antes de renderizarlas */}
           {categories
-            .filter((category: any) => category.isMainCategory)  // Solo categorías principales
+            .filter((category: any) => category.isMainCategory)
             .map((category: any) => (
               <div key={category._id}>
                 <button
@@ -93,11 +91,9 @@ const ProductsFilterSidebar = ({
                   onClick={() => handleCategoryClick(category.name)}
                 >
                   {category.name}
-                  {/* Indicador de expansión para las subcategorías */}
                   <span>{expandedCategory === category.name ? "-" : "+"}</span>
                 </button>
 
-                {/* Mostrar subcategorías cuando se expanda la categoría */}
                 <CSSTransition
                   in={expandedCategory === category.name}
                   timeout={300}
@@ -120,9 +116,6 @@ const ProductsFilterSidebar = ({
   );
 };
 
-
-
-
 const ShopPage = () => {
   const PRODUCTS_PER_PAGE = 9;
 
@@ -139,7 +132,6 @@ const ShopPage = () => {
   const [sortByCategory, setSortByCategory] = useState(categoryQueryParam || "");
   const [selectedSubcategories, setSelectedSubcategories] = useState<string[]>([]);
 
-  // Obtener las categorías del backend
   async function getCategories() {
     try {
       const response = await fetch(`${process.env.BACKEND_URL}/api/categories`);
@@ -152,7 +144,6 @@ const ShopPage = () => {
   }
 
 
-  // Obtener los productos del backend
   async function getProducts(): Promise<any> {
     const requestOptions = {
       method: "GET",
@@ -189,14 +180,12 @@ const ShopPage = () => {
   useEffect(() => {
     let tempProducts = [...products];
 
-    // Filtrar productos por el término de búsqueda
     if (searchQuery) {
       tempProducts = tempProducts.filter((product: any) =>
         product.name.toLowerCase().includes(searchQuery.toLowerCase())
       );
     }
 
-    // Filtrar productos por categoría principal o subcategoría seleccionada
     if (sortByCategory || selectedSubcategories.length > 0) {
       tempProducts = tempProducts.filter((product: any) =>
         (product?.category?.name?.toLowerCase() === sortByCategory.toLowerCase()) ||
@@ -228,14 +217,13 @@ const ShopPage = () => {
   };
 
   const onResetSearch = () => {
-    setSearchQuery("");         // Resetear el término de búsqueda
-    setSortByCategory("");      // Resetear la categoría seleccionada
-    setSelectedSubcategories([]); // Resetear las subcategorías seleccionadas
-    setCurrentPage(1);          // Volver a la primera página
+    setSearchQuery("");
+    setSortByCategory("");
+    setSelectedSubcategories([]);
+    setCurrentPage(1);
   };
 
 
-  // Calcular la cantidad total de páginas
   const totalPages = Math.ceil(products.length / PRODUCTS_PER_PAGE);
 
   return (

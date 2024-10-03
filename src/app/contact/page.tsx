@@ -1,7 +1,7 @@
 "use client";
 
-import Link from 'next/link'
 import React from 'react'
+import Link from 'next/link'
 import HeaderBackground from '@/components/header-background/HeaderBackground';
 import TextInput from '@/components/text-input/TextInput';
 import { CONTACT, CONTACT_BACKGROUND } from '@/utils/assets/contact/contact';
