@@ -1,8 +1,9 @@
 import React from "react";
-import HeaderBackground from "@/components/header-background/HeaderBackground";
+import Link from "next/link";
+
 import { BRICCHI_HNOS_BACKGROUND } from "@/utils/assets/images";
 import { CATEGORIES_IMAGES } from "@/utils/constants/categories";
-import Link from "next/link";
+import HeaderBackground from "@/components/header-background/HeaderBackground";
 
 const Categories = () => {
   return (
