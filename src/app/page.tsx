@@ -1,5 +1,6 @@
 import Link from "next/link";
 import ButtonUI from "@/components/buttons/ButtonUI";
+
 import { FaTools, FaCheckCircle } from "react-icons/fa"
 import { GalleryItem } from "@/components/gallery-shop";
 import { SERVICES_IMAGES } from "@/utils/constants/services";
