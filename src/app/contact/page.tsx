@@ -10,9 +10,9 @@ import { BRICCHI_HNOS_BACKGROUND } from '@/utils/assets/images';
 import { FACEBOOK_URL, INSTAGRAM_URL, PHONE_NUMBER } from '@/utils/constants/constants';
 
 const ContactPage = () => {
-  const handleClickToWhatsApp = () => {
+  const handleClickToWhatsApp = (phoneNumber: number) => {
     window.open(
-      `https://wa.me/${PHONE_NUMBER}`,
+      `https://wa.me/${phoneNumber}`,
       "_blank"
     );
   };
@@ -46,13 +46,22 @@ const ContactPage = () => {
                   <p className="text-gray-800">ventas@briccihnos.com</p>
                 </div>
               </Link>
-              <div onClick={handleClickToWhatsApp} className="cursor-pointer flex p-2 items-center rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-200 border border-gray-300">
+              <div onClick={() => handleClickToWhatsApp(5493584854418)} className="cursor-pointer flex p-2 items-center rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-200 border border-gray-300">
                 <div className="flex items-center justify-center rounded-lg">
                   <img src={TELEPHONE} alt="E-mail" className="h-16" />
                 </div>
                 <div className="ml-4">
-                  <p className="text-lg font-semibold text-gray-900">Teléfono</p>
-                  <p className="text-gray-800">+54 9 3584854418</p>
+                  <p className="text-lg font-semibold text-gray-900">Teléfono - Área de Ventas</p>
+                  <p className="text-gray-800">+54 9 3584854418 - Área de Ventas</p>
+                </div>
+              </div>
+              <div onClick={() => handleClickToWhatsApp(5493586542828)} className="cursor-pointer flex p-2 items-center rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-200 border border-gray-300">
+                <div className="flex items-center justify-center rounded-lg">
+                  <img src={TELEPHONE} alt="E-mail" className="h-16" />
+                </div>
+                <div className="ml-4">
+                  <p className="text-lg font-semibold text-gray-900">Teléfono - Área de Repuestos</p>
+                  <p className="text-gray-800">+54 9 3586542828</p>
                 </div>
               </div>
             </div>
@@ -84,7 +93,7 @@ const ContactPage = () => {
           alt="Background"
           className="absolute inset-0 w-full h-full object-cover object-bottom"
         />
-        <div className="relative w-full flex justify-end">
+        <div className="relative w-full flex justify-start">
           <div className="p-8 max-w-[30rem] bg-white bg-opacity-90 md:rounded-xl shadow-lg m-8">
             <h4 className="text-red-500 font-yellowtail text-2xl">Ubicación</h4>
             <h2 className="text-3xl font-bold text-gray-900">Nuestra Sucursal</h2>
