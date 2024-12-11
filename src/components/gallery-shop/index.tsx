@@ -80,22 +80,44 @@ const GalleryItemPlaceholder = () => (
     </div>
 );
 
-export const GalleryItem = ({ src, title, id, category }: any) => {
-    const imageHeight = 'h-72 lg:h-96';
+export const GalleryItem = ({ title, id, category, src, secondaryImages = [], manuals = [] }: any) => {
     return (
-        // <Link className="w-full flex flex-col rounded-lg p-2 hover:shadow-lg transition-shadow duration-200" href={`/product/${id}`}>
-        <div className="w-full flex flex-col rounded-lg p-2 hover:shadow-lg transition-shadow duration-200" >
-            <div className={`w-full overflow-hidden rounded-lg ${imageHeight}`}>
-                <img src={src} alt={title} className="w-full h-full object-cover" />
+        <div className="gallery-item">
+            <img
+                src={src}
+                alt={title}
+                className="main-image w-full h-72 lg:h-96 object-cover rounded-lg"
+                onError={(e: any) => (e.target.src = "/default-image.png")} // Imagen de respaldo
+            />
+            <div className="text-center mt-4">
+                <h3 className="text-lg font-bold">{title}</h3>
+                <p className="text-sm text-gray-600">{category}</p>
             </div>
-            <div className="text-center p-4 lg:mt-2 flex justify-between items-center">
-                <div className="text-left w-full">
-                    <p className="text-xl font-semibold text-green-900 font-open-sans overflow-hidden text-ellipsis whitespace-nowrap">{title}</p>
-                    <p className="text-red-700 text-lg font-yellowtail overflow-hidden text-ellipsis whitespace-nowrap">{category}</p>
-                </div>
+            <div className="secondary-images flex flex-wrap mt-2">
+                {secondaryImages.map((image: string, index: number) => (
+                    <img
+                        key={index}
+                        src={image}
+                        alt={`Secondary ${index + 1}`}
+                        className="w-16 h-16 object-cover rounded mr-2"
+                        onError={(e: any) => (e.target.src = "/default-image.png")} // Imagen de respaldo
+                    />
+                ))}
+            </div>
+            <div className="manuals mt-2">
+                {manuals.map((manual: any, index: number) => (
+                    <a
+                        key={index}
+                        href={manual.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block text-blue-500 hover:underline"
+                    >
+                        {manual.file_name || `Manual ${index + 1}`}
+                    </a>
+                ))}
             </div>
         </div>
-        // </Link> */
     );
 };
 
@@ -148,7 +170,7 @@ const GalleryShop = () => {
         };
 
         try {
-            const response = await fetch(`/api/products?page=1&limit=200`, requestOptions);
+            const response = await fetch(`/api/products`, requestOptions);
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
