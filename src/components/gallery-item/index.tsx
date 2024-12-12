@@ -80,13 +80,13 @@ const GalleryItem = ({
       {!hasMainImageError && (
         <div className="gallery-item transition-transform transform hover:-translate-y-2 hover:shadow-lg border border-gray-300 rounded-lg overflow-hidden">
           {/* Imagen Principal */}
-          <div className="relative w-full h-72 lg:h-96 cursor-pointer" onClick={() => openModal(0)}>
+          <div className="relative w-full h-72 lg:h-80 cursor-pointer" onClick={() => openModal(0)}>
             <Image
               src={imageSrc}
               alt={title}
               layout="fill"
               onError={handleMainImageError}
-              className={`object-cover transition-opacity duration-500`}
+              className={`object-contain transition-opacity duration-500`}
             />
           </div>
 
@@ -130,22 +130,24 @@ const GalleryItem = ({
               </div>
 
               {/* Botones de Navegación */}
-              <div className="flex space-x-4 w-full justify-center">
-                <button
-                  onClick={showPrevImage}
-                  className="flex items-center justify-center bg-white bg-opacity-50 hover:bg-opacity-75 p-3 rounded-full shadow-md transition-opacity duration-300"
-                  aria-label="Imagen Anterior"
-                >
-                  <FaChevronLeft size={20} />
-                </button>
-                <button
-                  onClick={showNextImage}
-                  className="flex items-center justify-center bg-white bg-opacity-50 hover:bg-opacity-75 p-3 rounded-full shadow-md transition-opacity duration-300"
-                  aria-label="Imagen Siguiente"
-                >
-                  <FaChevronRight size={20} />
-                </button>
-              </div>
+              {allImages.length > 1 && (
+                <div className="flex space-x-4 w-full justify-center">
+                  <button
+                    onClick={showPrevImage}
+                    className="flex items-center justify-center bg-white bg-opacity-50 hover:bg-opacity-75 p-3 rounded-full shadow-md transition-opacity duration-300"
+                    aria-label="Imagen Anterior"
+                  >
+                    <FaChevronLeft size={20} />
+                  </button>
+                  <button
+                    onClick={showNextImage}
+                    className="flex items-center justify-center bg-white bg-opacity-50 hover:bg-opacity-75 p-3 rounded-full shadow-md transition-opacity duration-300"
+                    aria-label="Imagen Siguiente"
+                  >
+                    <FaChevronRight size={20} />
+                  </button>
+                </div>
+              )}
 
               {/* Especificaciones */}
               {processedSpecifications && Object.keys(processedSpecifications).length > 0 && (

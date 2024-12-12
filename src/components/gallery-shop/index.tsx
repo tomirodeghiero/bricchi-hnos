@@ -1,10 +1,7 @@
 "use client";
 
 import React, { useEffect, useMemo, useRef, useState } from 'react';
-import Link from 'next/link';
-import { NO_RESULTS } from '@/utils/assets/icons/icons';
 import { CATEGORIES } from '@/utils/constants/categories';
-import { GrNavigate } from 'react-icons/gr';
 
 export const STATIC_PRODUCTS = [
     {
@@ -79,47 +76,6 @@ const GalleryItemPlaceholder = () => (
         </div>
     </div>
 );
-
-export const GalleryItem = ({ title, id, category, src, secondaryImages = [], manuals = [] }: any) => {
-    return (
-        <div className="gallery-item">
-            <img
-                src={src}
-                alt={title}
-                className="main-image w-full h-72 lg:h-96 object-cover rounded-lg"
-                onError={(e: any) => (e.target.src = "/default-image.png")} // Imagen de respaldo
-            />
-            <div className="text-center mt-4">
-                <h3 className="text-lg font-bold">{title}</h3>
-                <p className="text-sm text-gray-600">{category}</p>
-            </div>
-            <div className="secondary-images flex flex-wrap mt-2">
-                {secondaryImages.map((image: string, index: number) => (
-                    <img
-                        key={index}
-                        src={image}
-                        alt={`Secondary ${index + 1}`}
-                        className="w-16 h-16 object-cover rounded mr-2"
-                        onError={(e: any) => (e.target.src = "/default-image.png")} // Imagen de respaldo
-                    />
-                ))}
-            </div>
-            <div className="manuals mt-2">
-                {manuals.map((manual: any, index: number) => (
-                    <a
-                        key={index}
-                        href={manual.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="block text-blue-500 hover:underline"
-                    >
-                        {manual.file_name || `Manual ${index + 1}`}
-                    </a>
-                ))}
-            </div>
-        </div>
-    );
-};
 
 const GalleryShop = () => {
     const [activeTab, setActiveTab] = useState<any>(null);
@@ -275,7 +231,7 @@ const GalleryShop = () => {
                 }
             `}
                     </style>
-                    {CATEGORIES.map(tab => (
+                    {CATEGORIES.map((tab: any) => (
                         <button
                             key={tab.name}
                             className={`flex-none font-jost lg:w-1/3 lg:flex-grow text-lg font-medium py-2 lg:py-3 px-4 rounded-xl ${activeTab === tab ? 'bg-green-900 text-white' : 'text-gray-900'} focus:outline-none transition-colors duration-150 ease-in-out font-family-jost`}
@@ -314,7 +270,7 @@ const GalleryShop = () => {
                         }
                     `}
                     </style>
-                    {CATEGORIES.map(tab => (
+                    {CATEGORIES.map((tab: any) => (
                         <button
                             key={tab.name}
                             className={`flex-none lg:w-1/3 lg:flex-grow text-lg font-medium py-2 lg:py-3 px-4 rounded-xl ${activeTab?.name === tab.name ? 'bg-green-900 text-white' : 'text-gray-900'} focus:outline-none transition-colors duration-150 ease-in-out font-family-jost`}

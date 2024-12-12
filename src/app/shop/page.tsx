@@ -13,6 +13,7 @@ import { DROP_RIGHT, NO_RESULTS, SEARCH } from "@/utils/assets/icons/icons";
 import GalleryItemPlaceholder from "@/components/gallery-item-placeholder";
 import GalleryItem from "@/components/gallery-item";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { CATEGORIES } from "@/utils/constants/categories";
 
 const CategoryTags = ({
   subcategories,
@@ -26,7 +27,7 @@ const CategoryTags = ({
   const handleSubcategoryClick = (subcategoryName: string) => {
     const newSubcategory = selectedSubcategoryLocal === subcategoryName ? null : subcategoryName;
     setSelectedSubcategoryLocal(newSubcategory);
-    onSortBySubcategory(newSubcategory); // Llama al filtro de subcategorías
+    onSortBySubcategory(newSubcategory)
   };
 
   return (
@@ -61,7 +62,6 @@ const CategoryTags = ({
   );
 };
 
-// Componente ProductsFilterSidebar sin selección de marcas
 const ProductsFilterSidebar = ({
   searchQuery,
   onSearch,
@@ -70,9 +70,8 @@ const ProductsFilterSidebar = ({
   categories,
 }: any) => {
   const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null); // Añadimos estado local para selección de categoría
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
 
-  // Crear un objeto para almacenar las referencias de cada categoría
   const transitionRefs = useRef<{ [key: string]: React.RefObject<HTMLDivElement> }>({});
 
   const handleCategoryClick = (categoryName: string | null) => {
@@ -82,7 +81,7 @@ const ProductsFilterSidebar = ({
       setExpandedCategory(categoryName);
     }
     onSortByCategory(categoryName);
-    setSelectedCategory(categoryName); // Actualizamos el estado local
+    setSelectedCategory(categoryName);
   };
 
   return (
@@ -114,7 +113,6 @@ const ProductsFilterSidebar = ({
           </button>
 
           {categories?.slice(1).map((category: any) => {
-            // Crear una referencia si no existe
             if (!transitionRefs.current[category.category]) {
               transitionRefs.current[category.category] = React.createRef();
             }
@@ -163,7 +161,7 @@ const ShopPage = () => {
 
   const [isLoading, setIsLoading] = useState(true);
   const [products, setProducts] = useState<any[]>([]);
-  const [categories, setCategories] = useState([]);
+  const [categories, setCategories] = useState<any>([]);
   const [filteredProducts, setFilteredProducts] = useState<any[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [searchQuery, setSearchQuery] = useState(searchQueryParam || "");
@@ -178,13 +176,7 @@ const ShopPage = () => {
   };
   async function getCategories() {
     try {
-      const response = await fetch(`/api/categories-structured`, requestOptions);
-      if (!response.ok) {
-        console.error(`Error fetching categories: HTTP ${response.status}`);
-        return;
-      }
-      const data = await response.json();
-      setCategories(data);
+      setCategories(CATEGORIES);
     } catch (error) {
       console.error('Error fetching categories:', error);
     }
@@ -328,39 +320,17 @@ const ShopPage = () => {
                     secondaryImages={product.secondaryImageUrls}
                     manuals={product.manuals}
                     description={product.description}
-                    specifications={product.specifications} // Asegúrate de que este campo exista en tus datos
+                    specifications={product.specifications}
                   />
                 ))}
               </div>
             ) : (
-              // Mostrar mensaje de no resultados cuando no hay productos y no está cargando
               <div className="flex flex-col justify-center items-center w-full">
                 <div className="relative h-60 w-60">
                   <Image src={NO_RESULTS} alt="Sin resultados" fill className="object-contain" />
                 </div>
                 <p className="font-medium text-[1.15rem] max-w-[30rem] text-center">
                   No se encontraron productos que coincidan con los criterios de búsqueda.
-                </p>
-                <button
-                  onClick={onResetSearch}
-                  className="bg-white border py-2 mb-8 text-[0.85rem] font-medium px-8 border-black rounded mt-7 uppercase"
-                >
-                  Reestablecer Búsqueda
-                </button>
-              </div>
-            )}
-
-            {/* Manejar el caso cuando no hay productos filtrados pero ya no está cargando */}
-            {!isLoading && filteredProducts.length === 0 && products.length > 0 && (
-              <div className="flex flex-col justify-center items-center w-full">
-                <div className="relative h-60 w-60">
-                  <Image src={NO_RESULTS} alt="Sin resultados" fill className="object-contain" />
-                </div>
-                <p className="font-medium text-[1.15rem] max-w-[30rem] text-center">
-                  No se encontraron productos que coincidan con los criterios de búsqueda.
-                </p>
-                <p className="mt-4 text-[1.05rem] text-center">
-                  Por favor, intenta recortar o reformular tu búsqueda 🔎
                 </p>
                 <button
                   onClick={onResetSearch}

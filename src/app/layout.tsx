@@ -9,6 +9,7 @@ import WhatsApp from "@/components/whatsapp/Whatsapp";
 
 import { AOSInit } from "../../aos";
 import { CartProvider } from "@/context/CartContext";
+import { CONTACTS } from "@/utils/constants/constants";
 
 export const metadata: Metadata = {
   title: "Bricchi Hnos. S.A.",
@@ -34,7 +35,7 @@ export default function RootLayout({
         <CartProvider>
           <Navbar />
           {children}
-          <WhatsApp />
+          <WhatsApp contacts={CONTACTS} />;
           <Footer />
         </CartProvider>
       </body>

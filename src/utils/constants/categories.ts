@@ -2,30 +2,183 @@ import { IMAGE_01, IMAGE_02, IMAGE_03, IMAGE_04, IMAGE_05, IMAGE_06 } from "../a
 
 export const CATEGORIES = [
   {
-    name: "Maquinaria Agrícola",
-    subcategories: [
-      "Pulverizadoras - Praba",
-      "Fertilizadoras - Fertec",
-      "Sembradoras - Apache",
-      "Agricultura de Precisión",
-      "Implementos Agrícolas - Velmac, J&M, Yomel"
+    "category": "Categoría",
+    "subcategories": [
+      {
+        "name": "Subcategoría",
+        "brands": [
+          "Marca"
+        ]
+      }
     ]
   },
   {
-    name: "Maquinaria Vial",
-    subcategories: [
-      "Pala Cargadoras - DHM Industria",
-      "Autoelevadores - DHM Industria",
-      "Línea Eléctrica - DHM Industria",
-      "Mini Palas - DHM Industria",
-      "Maquinaria Vial - Michigan"
+    "category": "Siembra y Laboreo",
+    "subcategories": [
+      {
+        "name": "Sembradoras",
+        "brands": [
+          "Apache"
+        ]
+      }
     ]
   },
   {
-    name: "Concesionarios Oficiales",
-    subcategories: [
-      "Apache - Sembradoras",
-      "Michigan - Maquinaria Vial"
+    "category": "Vial y Agro",
+    "subcategories": [
+      {
+        "name": "Autoelevadores",
+        "brands": [
+          "Michigan"
+        ]
+      },
+      {
+        "name": "Linea electrica",
+        "brands": [
+          "Michigan"
+        ]
+      },
+      {
+        "name": "Pala Cargadora",
+        "brands": [
+          "Michigan"
+        ]
+      },
+      {
+        "name": "Porta Troncos",
+        "brands": [
+          "Michigan"
+        ]
+      },
+      {
+        "name": "Mini Palas",
+        "brands": [
+          "Michigan"
+        ]
+      },
+      {
+        "name": "Compactadores",
+        "brands": [
+          "Michigan"
+        ]
+      },
+      {
+        "name": "Retropalas",
+        "brands": [
+          "Michigan"
+        ]
+      },
+      {
+        "name": "Motoniveladoras",
+        "brands": [
+          "Michigan"
+        ]
+      },
+      {
+        "name": "Excavadoras",
+        "brands": [
+          "Michigan"
+        ]
+      },
+      {
+        "name": "Elevadores",
+        "brands": [
+          "Hanomag"
+        ]
+      },
+      {
+        "name": "Palas cargadoras",
+        "brands": [
+          "Hanomag"
+        ]
+      },
+      {
+        "name": "Linea Agricola",
+        "brands": [
+          "Hanomag"
+        ]
+      },
+      {
+        "name": "Linea Parque",
+        "brands": [
+          "Hanomag"
+        ]
+      },
+      {
+        "name": "Linea Stark",
+        "brands": [
+          "Hanomag"
+        ]
+      },
+      {
+        "name": "Linea TR",
+        "brands": [
+          "Hanomag"
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Implementos para Fincas",
+    "subcategories": [
+      {
+        "name": "Agricultura",
+        "brands": [
+          "Bellmaq"
+        ]
+      },
+      {
+        "name": "Trailers",
+        "brands": [
+          "Bellmaq"
+        ]
+      },
+      {
+        "name": "Ganaderia",
+        "brands": [
+          "Bellmaq"
+        ]
+      },
+      {
+        "name": "Quinta",
+        "brands": [
+          "Bellmaq"
+        ]
+      },
+      {
+        "name": "Desmalezadoras",
+        "brands": [
+          "Bellmaq"
+        ]
+      },
+      {
+        "name": "General",
+        "brands": [
+          "Bellmaq"
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Pasturas",
+    "subcategories": [
+      {
+        "name": "No",
+        "brands": [
+          "Yomel"
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Accesorios Siembra y Cosecha",
+    "subcategories": [
+      {
+        "name": "No",
+        "brands": [
+          "JYM"
+        ]
+      }
     ]
   }
 ];

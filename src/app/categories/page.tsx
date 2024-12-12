@@ -23,7 +23,7 @@ const Categories = () => {
                   <img
                     src={category.image}
                     alt={category.title}
-                    className="w-full h-full object-cover transition-transform duration-300 transform hover:scale-105 rounded-lg md:rounded-2xl"
+                    className="w-full h-full object-contain transition-transform duration-300 transform hover:scale-105 rounded-lg md:rounded-2xl"
                   />
                 </div>
                 <h3 className="font-bold text-gray-900 mt-4 text-xl">
