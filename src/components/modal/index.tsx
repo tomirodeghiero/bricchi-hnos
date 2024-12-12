@@ -2,8 +2,15 @@
 
 import React, { useEffect } from "react";
 import { FaTimes } from "react-icons/fa";
+import ReactDOM from "react-dom";
 
-const Modal = ({ isOpen, onClose, children }: any) => {
+interface ModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+  children: React.ReactNode;
+}
+
+const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
@@ -19,7 +26,7 @@ const Modal = ({ isOpen, onClose, children }: any) => {
   useEffect(() => {
     if (!isOpen) return;
 
-    const handleKeyDown = (e: any) => {
+    const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
         onClose();
       }
@@ -32,23 +39,26 @@ const Modal = ({ isOpen, onClose, children }: any) => {
     };
   }, [isOpen, onClose]);
 
-  if (!isOpen) return null;
+  if (typeof window === "undefined") {
+    return null;
+  }
 
-  const handleBackdropClick = (e: any) => {
-    if (e.target === e.currentTarget) {
-      onClose();
-    }
-  };
-
-  return (
+  return ReactDOM.createPortal(
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75"
-      onClick={handleBackdropClick}
+      className={`fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 transition-opacity duration-300 ${isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+        }`}
+      onClick={(e) => {
+        if (e.target === e.currentTarget) {
+          onClose();
+        }
+      }}
       role="dialog"
       aria-modal="true"
     >
       <div
-        className="relative w-full max-w-4xl bg-white rounded-lg p-4"
+        className={`relative w-[90%] max-w-4xl bg-white rounded-lg p-6 shadow-lg overflow-y-auto transform transition-transform duration-300 ${isOpen ? "scale-100" : "scale-95"
+          }`}
+        style={{ maxHeight: "75vh" }}
         onClick={(e) => e.stopPropagation()}
         role="document"
         aria-labelledby="modal-title"
@@ -56,14 +66,15 @@ const Modal = ({ isOpen, onClose, children }: any) => {
       >
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 text-gray-700 hover:text-gray-900"
-          aria-label="Cerrar Modal"
+          className="absolute top-4 right-4 text-gray-500 hover:text-gray-700 focus:outline-none"
+          aria-label="Close Modal"
         >
           <FaTimes size={24} />
         </button>
         {children}
       </div>
-    </div>
+    </div>,
+    document.body
   );
 };
 

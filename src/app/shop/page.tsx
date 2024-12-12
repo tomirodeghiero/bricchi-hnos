@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useSearchParams } from "next/navigation";
 import { CSSTransition } from "react-transition-group";
-import React, { Suspense, useEffect, useState } from "react";
+import React, { Suspense, useEffect, useRef, useState } from "react";
 
 import Features from "@/components/features/Features";
 import HeaderBackground from "@/components/header-background/HeaderBackground";
@@ -42,14 +42,14 @@ const CategoryTags = ({
               {subcategory.name}
             </button>
             {selectedSubcategoryLocal === subcategory.name && (
-              <div className="flex flex-wrap gap-2 mt-2">
+              <div className="flex flex-col gap-2 mt-2 pl-4">
                 {subcategory.brands.map((brand: string) => (
-                  <span
-                    key={brand}
-                    className="tag-item"
-                  >
-                    {brand}
-                  </span>
+                  <div key={brand} className="flex items-center">
+                    <span className="text-gray-700 font-medium mr-2">-</span>
+                    <span className="shadow px-3 py-1 bg-green-900 text-white rounded-full text-sm cursor-default">
+                      {brand}
+                    </span>
+                  </div>
                 ))}
               </div>
             )}
@@ -72,6 +72,9 @@ const ProductsFilterSidebar = ({
 }: any) => {
   const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null); // Añadimos estado local para selección de categoría
+
+  // Crear un objeto para almacenar las referencias de cada categoría
+  const transitionRefs = useRef<{ [key: string]: React.RefObject<HTMLDivElement> }>({});
 
   const handleCategoryClick = (categoryName: string | null) => {
     if (expandedCategory === categoryName) {
@@ -111,32 +114,40 @@ const ProductsFilterSidebar = ({
             Todas las Categorías
           </button>
 
-          {categories?.map((category: any) => (
-            <div key={category.category}>
-              <button
-                className={`py-2 text-left w-full flex justify-between items-center ${selectedCategory === category.category ? "font-bold" : ""
-                  }`}
-                onClick={() => handleCategoryClick(category.category)}
-              >
-                {category.category}
-                <span>{expandedCategory === category.category ? "-" : "+"}</span>
-              </button>
+          {categories?.slice(1).map((category: any) => {
+            // Crear una referencia si no existe
+            if (!transitionRefs.current[category.category]) {
+              transitionRefs.current[category.category] = React.createRef();
+            }
+            const nodeRef = transitionRefs.current[category.category];
 
-              <CSSTransition
-                in={expandedCategory === category.category}
-                timeout={300}
-                classNames="subcategory-transition"
-                unmountOnExit
-              >
-                <div>
-                  <CategoryTags
-                    subcategories={category.subcategories}
-                    onSortBySubcategory={onSortBySubcategory}
-                  />
-                </div>
-              </CSSTransition>
-            </div>
-          ))}
+            return (
+              <div key={category.category}>
+                <button
+                  className={`py-2 text-left w-full flex justify-between items-center ${selectedCategory === category.category ? "font-bold" : ""}`}
+                  onClick={() => handleCategoryClick(category.category)}
+                >
+                  {category.category}
+                  <span>{expandedCategory === category.category ? "-" : "+"}</span>
+                </button>
+
+                <CSSTransition
+                  in={expandedCategory === category.category}
+                  timeout={300}
+                  classNames="subcategory-transition"
+                  unmountOnExit
+                  nodeRef={nodeRef} // Proporcionar nodeRef
+                >
+                  <div ref={nodeRef}>
+                    <CategoryTags
+                      subcategories={category.subcategories}
+                      onSortBySubcategory={onSortBySubcategory}
+                    />
+                  </div>
+                </CSSTransition>
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>
@@ -296,8 +307,6 @@ const ShopPage = () => {
             onSortByCategory={onSortByCategory}
             onSortBySubcategory={onSortBySubcategory} // Pasar la función para subcategoría
             categories={categories}
-          // selectedBrands={selectedBrands} // Eliminamos selectedBrands
-          // onToggleBrand={onToggleBrand} // Eliminamos onToggleBrand
           />
 
           <div className="flex-col w-full">
@@ -366,22 +375,31 @@ const ShopPage = () => {
 
             {/* Paginación */}
             {!isLoading && totalPages > 1 && (
-              <div className="flex justify-center items-center my-8 lg:mb-0">
-                <div className="flex w-full max-w-lg mx-auto justify-between items-center">
+              <div className="flex justify-center items-center my-8">
+                <div className="flex space-x-4 items-center">
+                  {/* Botón Anterior */}
                   <button
                     onClick={() => handlePageChange(currentPage - 1)}
                     disabled={currentPage === 1}
-                    className={`w-10 h-10 bg-gray-400 hover:bg-yellow-400 text-white rounded ${currentPage === 1 ? "cursor-not-allowed opacity-50" : ""
-                      }`}
+                    className={`flex items-center justify-center w-10 h-10 bg-red-700 text-white rounded-full shadow-md transition-transform transform hover:scale-105 hover:bg-red-900 focus:outline-none 
+          ${currentPage === 1 ? "cursor-not-allowed opacity-50" : ""}`}
+                    aria-label="Página Anterior"
                   >
                     <FaChevronLeft size={20} />
                   </button>
-                  <span className="px-4">{`${currentPage} de ${totalPages}`}</span>
+
+                  {/* Indicador de Página */}
+                  <span className="text-lg font-medium text-gray-700">
+                    Página <span className="text-red-700">{currentPage}</span> de <span className="text-red-900">{totalPages}</span>
+                  </span>
+
+                  {/* Botón Siguiente */}
                   <button
                     onClick={() => handlePageChange(currentPage + 1)}
                     disabled={currentPage === totalPages}
-                    className={`w-10 h-10 bg-gray-400 hover:bg-yellow-400 text-white rounded ${currentPage === totalPages ? "cursor-not-allowed opacity-50" : ""
-                      }`}
+                    className={`flex items-center justify-center w-10 h-10 bg-red-700 text-white rounded-full shadow-md transition-transform transform hover:scale-105 hover:bg-red-900 focus:outline-none 
+          ${currentPage === totalPages ? "cursor-not-allowed opacity-50" : ""}`}
+                    aria-label="Página Siguiente"
                   >
                     <FaChevronRight size={20} />
                   </button>
