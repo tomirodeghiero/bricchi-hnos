@@ -170,11 +170,17 @@ const ShopPage = () => {
   const [searchQuery, setSearchQuery] = useState(searchQueryParam || "");
   const [selectedCategory, setSelectedCategory] = useState<string | null>(categoryQueryParam || null);
   const [selectedSubcategory, setSelectedSubcategory] = useState<string | null>(subcategoryQueryParam || null);
-  // Eliminamos selectedBrands ya que no serán utilizadas
+
+  const requestOptions = {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  };
 
   async function getCategories() {
     try {
-      const response = await fetch(`${process.env.BACKEND_URL}/api/categories-structured`);
+      const response = await fetch(`/api/categories-structured`, requestOptions);
       const data = await response.json();
       console.log("Categorías obtenidas:", data);
       setCategories(data);
@@ -184,15 +190,10 @@ const ShopPage = () => {
   }
 
   async function getProducts(): Promise<any> {
-    const requestOptions = {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    };
+
 
     try {
-      const response = await fetch(`${process.env.BACKEND_URL}/api/products`, requestOptions);
+      const response = await fetch(`/api/products`, requestOptions);
       if (!response.ok) {
         console.error("Error al obtener productos");
         throw new Error(`HTTP error! status: ${response.status}`);
