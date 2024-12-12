@@ -14,7 +14,6 @@ import GalleryItemPlaceholder from "@/components/gallery-item-placeholder";
 import GalleryItem from "@/components/gallery-item";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
-// Componente CategoryTags sin selección de marcas
 const CategoryTags = ({
   subcategories,
   onSortBySubcategory,
