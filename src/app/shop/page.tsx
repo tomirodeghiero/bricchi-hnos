@@ -177,33 +177,31 @@ const ShopPage = () => {
       "Content-Type": "application/json",
     },
   };
-
   async function getCategories() {
     try {
       const response = await fetch(`/api/categories-structured`, requestOptions);
+      if (!response.ok) {
+        console.error(`Error fetching categories: HTTP ${response.status}`);
+        return;
+      }
       const data = await response.json();
-      console.log("Categorías obtenidas:", data);
       setCategories(data);
     } catch (error) {
       console.error('Error fetching categories:', error);
     }
   }
 
-  async function getProducts(): Promise<any> {
-
-
+  async function getProducts() {
     try {
       const response = await fetch(`/api/products`, requestOptions);
       if (!response.ok) {
-        console.error("Error al obtener productos");
-        throw new Error(`HTTP error! status: ${response.status}`);
+        console.error(`Error fetching products: HTTP ${response.status}`);
+        return;
       }
-
       const data = await response.json();
-      console.log("Productos obtenidos:", data);
       setProducts(data);
     } catch (error) {
-      console.error("Error:", error);
+      console.error('Error fetching products:', error);
     } finally {
       setIsLoading(false);
     }

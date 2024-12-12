@@ -98,20 +98,18 @@ export default function Navbar() {
                 <img className="h-8" src={BRICCHI_HNOS_LOGOTYPE} alt="Bricchi Hnos. Logotype" />
               </Link>
               <div className="flex items-center gap-4">
-                <Link href="/shopping-cart">
-                  <div className="relative">
-                    <img
-                      className="h-5 cursor-pointer"
-                      src={SHOPPING_CART}
-                      alt="Shopping cart"
-                    />
-                    {cart.length > 0 && (
-                      <div className="absolute top-[0.6rem] left-[0.7rem] text-[0.9rem] h-5 w-5 rounded-full border border-yellow-800 bg-gray-400 flex items-center justify-center text-white shadow">
-                        {cart.length}
-                      </div>
-                    )}
-                  </div>
-                </Link>
+                <div className="relative">
+                  <img
+                    className="h-5 cursor-pointer"
+                    src={SHOPPING_CART}
+                    alt="Shopping cart"
+                  />
+                  {cart.length > 0 && (
+                    <div className="absolute top-[0.6rem] left-[0.7rem] text-[0.9rem] h-5 w-5 rounded-full border border-yellow-800 bg-gray-400 flex items-center justify-center text-white shadow">
+                      {cart.length}
+                    </div>
+                  )}
+                </div>
                 <div onClick={toggleMenu}>
                   <img
                     className="h-5 cursor-pointer"
