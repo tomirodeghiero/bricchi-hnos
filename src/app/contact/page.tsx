@@ -51,8 +51,8 @@ const ContactPage = () => {
                   <img src={TELEPHONE} alt="E-mail" className="h-16" />
                 </div>
                 <div className="ml-4">
-                  <p className="text-lg font-semibold text-gray-900">Teléfono - Área de Ventas</p>
-                  <p className="text-gray-800">+54 9 3584854418 - Área de Ventas</p>
+                  <p className="text-lg font-semibold text-gray-900">Teléfono - Área de Maquinaria</p>
+                  <p className="text-gray-800">+54 9 3584854418</p>
                 </div>
               </div>
               <div onClick={() => handleClickToWhatsApp(5493586542828)} className="cursor-pointer flex p-2 items-center rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-200 border border-gray-300">

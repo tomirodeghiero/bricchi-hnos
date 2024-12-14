@@ -1,6 +1,6 @@
 // Information
-export const SALES_PHONE_NUMBER = "5493584854418";
-export const SPARE_PARTS_PHONE_NUMBER = "5493586542828";
+export const SALES_PHONE_NUMBER = "5493586542828";
+export const SPARE_PARTS_PHONE_NUMBER = "5493584854418";
 
 // Socials Media
 export const INSTAGRAM_URL =
@@ -16,7 +16,7 @@ export const CONTACTS = [
   },
   {
     phoneNumber: SPARE_PARTS_PHONE_NUMBER,
-    message: "Hola! Quiero información sobre ventas.",
-    label: "Ventas",
+    message: "Hola! Quiero información sobre maquinaria.",
+    label: "Maquinaria",
   },
 ];
