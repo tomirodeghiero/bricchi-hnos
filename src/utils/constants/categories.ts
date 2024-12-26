@@ -39,12 +39,6 @@ export const CATEGORIES = [
         ]
       },
       {
-        "name": "Pala Cargadora",
-        "brands": [
-          "Michigan"
-        ]
-      },
-      {
         "name": "Porta Troncos",
         "brands": [
           "Michigan"
@@ -83,7 +77,7 @@ export const CATEGORIES = [
       {
         "name": "Palas cargadoras",
         "brands": [
-          "Hanomag"
+          "Hanomag",
         ]
       },
       {

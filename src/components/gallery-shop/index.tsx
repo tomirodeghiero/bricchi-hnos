@@ -30,7 +30,7 @@ export const STATIC_PRODUCTS = [
         src: '/assets/shop/04.png',
         title: 'Hanomag E143',
         category: 'Maquinaria Vial',
-        subcategory: 'Pala Cargadoras',
+        subcategory: 'Palas Cargadoras',
     },
     {
         id: 5,
@@ -52,13 +52,6 @@ export const STATIC_PRODUCTS = [
         title: 'ME 25-45T',
         category: 'Maquinaria Vial',
         subcategory: 'Autoelevadores',
-    },
-    {
-        id: 8,
-        src: '/assets/shop/08.png',
-        title: 'Hanomag E143',
-        category: 'Maquinaria Vial',
-        subcategory: 'Pala Cargadoras',
     },
 ];
 

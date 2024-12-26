@@ -246,14 +246,14 @@ export default function Navbar() {
       <div className="relative flex items-center">
         <button
           type="button"
-          className="ml-4 h-10 w-10 bg-green-400 text-white rounded-full flex items-center justify-center"
+          className="ml-4 h-10 w-10 bg-red-700 text-white rounded-full flex items-center justify-center"
         >
           <FaSearch className="h-4 w-4" />
         </button>
 
         <button
           type="button"
-          className="ml-4 h-10 w-10 bg-green-900 text-white rounded-full flex items-center justify-center"
+          className="ml-4 h-10 w-10 bg-stone-900 text-white rounded-full flex items-center justify-center"
         >
           <FaShoppingCart className="h-4 w-4" />
         </button>

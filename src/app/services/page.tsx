@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 import { BRICCHI_HNOS_BACKGROUND } from "@/utils/assets/images";
 import HeaderBackground from "@/components/header-background/HeaderBackground";
-import { GO_TO_SHOP, SERVICE_01, SERVICE_02, SERVICE_03, SERVICE_04, SERVICE_05, SERVICE_06, SERVICES } from "@/utils/constants/services";
+import { SERVICE_01, SERVICE_02, SERVICE_03, SERVICE_04, SERVICE_05, SERVICE_06, SERVICES } from "@/utils/constants/services";
 
 const Services = () => {
   return (
@@ -87,9 +87,8 @@ const Services = () => {
         </div>
 
         <Link href="/shop" className="text-center mt-8 flex mx-auto justify-center">
-          <button className="bg-white hover:bg-green-900 border border-green-900 font-medium focus:outline-none focus:ring-1 focus:ring-green-600 focus:ring-opacity-50 transition duration-300 ease-in-out transform hover:shadow-md hover:-translate-y-1 rounded-[40px] text-green-900 hover:text-white px-6 py-3 flex items-center">
+          <button className="bg-white hover:bg-red-700 border border-red-700 font-medium focus:outline-none focus:ring-1 focus:ring-green-600 focus:ring-opacity-50 transition duration-300 ease-in-out transform hover:shadow-md hover:-translate-y-1 rounded-[40px] text-red-700 hover:text-white px-6 py-3 flex items-center">
             Explorar más en la Tienda
-            <img src={GO_TO_SHOP} alt="Ir a la Tienda" className="w-5 h-5 ml-2" />
           </button>
         </Link>
       </div>

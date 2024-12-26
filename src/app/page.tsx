@@ -1,13 +1,14 @@
 "use client";
 
-import Link from "next/link";
-import ButtonUI from "@/components/buttons/ButtonUI";
 
+import { useEffect, useState } from "react";
+import Link from "next/link";
+
+import ButtonUI from "@/components/buttons/ButtonUI";
 import { FaTools, FaCheckCircle } from "react-icons/fa"
 import { HOME_CATEGORIES_IMAGES, SERVICES_IMAGES } from "@/utils/constants/services";
 import { BACKGROUND_STATISTICS, CAMP, COMPANIES, HERO, HOME_01, HOME_02, HOME_03, STATIC_PRODUCTS, STATISTICS } from "@/utils/constants/home";
 import GalleryItem from "@/components/gallery-item";
-import { useEffect, useState } from "react";
 
 export default function Home() {
   const [isMobile, setIsMobile] = useState(false);
@@ -34,7 +35,7 @@ export default function Home() {
           <img
             src={HERO}
             alt="Agricultural field"
-            className="object-contain w-full lg:h-[100vh]"
+            className="object-cover w-full h-full"
           />
 
           <div className="absolute bottom-40 hidden md:flex justify-center items-center mx-auto w-full z-50">
@@ -227,10 +228,10 @@ export default function Home() {
                     <img
                       src={product.image}
                       alt={product.title}
-                      className="w-full h-60 object-cover transition-transform duration-300 transform hover:scale-105"
+                      className="w-full h-60 object-contain transition-transform duration-300 transform hover:scale-105"
                     />
                   </div>
-                  <h3 className="font-medium text-gray-900 mt-2 text-center text-xl px-4">
+                  <h3 className="font-medium text-gray-900 mt-[-2rem] text-center text-xl px-4">
                     {product.title}
                   </h3>
                 </div>

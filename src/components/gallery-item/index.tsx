@@ -125,7 +125,7 @@ const GalleryItem = ({
                 <img
                   src={allImages[currentImageIndex]}
                   alt={`${title} - Image ${currentImageIndex + 1}`}
-                  className={`transition-opacity object-cover duration-500 rounded-lg`}
+                  className={`transition-opacity object-cover duration-500 rounded-lg h-full`}
                 />
               </div>
 
