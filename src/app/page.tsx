@@ -1,56 +1,55 @@
+"use client";
+
 import Link from "next/link";
 import ButtonUI from "@/components/buttons/ButtonUI";
 
 import { FaTools, FaCheckCircle } from "react-icons/fa"
-import { SERVICES_IMAGES } from "@/utils/constants/services";
+import { HOME_CATEGORIES_IMAGES, SERVICES_IMAGES } from "@/utils/constants/services";
 import { BACKGROUND_STATISTICS, CAMP, COMPANIES, HERO, HOME_01, HOME_02, HOME_03, STATIC_PRODUCTS, STATISTICS } from "@/utils/constants/home";
 import GalleryItem from "@/components/gallery-item";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const visibleProducts = isMobile
+    ? STATIC_PRODUCTS.slice(0, 2)
+    : STATIC_PRODUCTS;
+
   return (
     <main className="relative">
       <div className="relative">
-        <div className="absolute inset-0">
+        <div className="relative">
           <img
             src={HERO}
             alt="Agricultural field"
-            className="object-cover w-full h-[87.5vh] sm:h-[70vh] md:h-[80vh] lg:h-[87.5vh]"
+            className="object-contain w-full lg:h-[100vh]"
           />
-          <div className="absolute inset-0 bg-black opacity-50 h-[87.5vh] sm:h-[70vh] md:h-[80vh] lg:h-[87.5vh]" />
-        </div>
 
-        <div
-          className="relative flex flex-col items-start justify-center h-[77.5vh] sm:h-[60vh] md:h-[70vh] lg:h-[77.5vh] px-8 py-12 text-white sm:px-16 md:px-24 lg:px-32"
-          data-aos="fade-up"
-        >
-          <h1
-            className="text-lg font-bold font-livvic bg-stone-500 px-3 py-1 rounded-md shadow"
-          >
-            Maquinaria & Equipamiento
-          </h1>
-          <h2
-            className="mt-2 text-4xl font-bold text-yellow-300 sm:text-5xl md:text-6xl font-livvic"
-          >
-            Maquinaria Agrícola
-          </h2>
-          <h2
-            className="mt-1 text-4xl font-bold sm:text-5xl md:text-6xl font-livvic"
-          >
-            De calidad
-          </h2>
-        </div>
-
-        <div className="flex justify-center items-center mx-auto w-full bg-red-200 z-50">
-          <div className="scrolldown" style={{ color: "skyblue" }}>
-            <div className="chevrons">
-              <div className="chevrondown"></div>
-              <div className="chevrondown"></div>
+          <div className="absolute bottom-40 hidden md:flex justify-center items-center mx-auto w-full z-50">
+            <div className="scrolldown" style={{ color: "skyblue" }}>
+              <div className="chevrons">
+                <div className="chevrondown"></div>
+                <div className="chevrondown"></div>
+              </div>
             </div>
           </div>
         </div>
+
       </div>
 
-      <div className="relative mt-[2.5vh] md:mt-[10vh] py-10 flex flex-col justify-center lg:px-0 px-5" data-aos="fade-up">
+      <div className="relative py-10 flex flex-col justify-center lg:px-0 px-5" data-aos="fade-up">
         <div className="max-w-4xl mx-auto flex gap-8 flex-wrap sm:flex-nowrap">
           <img
             src={HOME_01}
@@ -97,7 +96,7 @@ export default function Home() {
             className="flex-1 flex flex-col justify-center"
             data-aos="fade-left"
           >
-            <h1 className="font-yellowtail text-red-500 text-2xl font-medium mb-1">
+            <h1 className="font-yellowtail text-2xl font-medium">
               Sobre Nosotros
             </h1>
 
@@ -156,11 +155,12 @@ export default function Home() {
           Nuestros Productos
         </h3>
 
-        <div className="mx-auto w-full px-5  md:max-w-7xl py-4 md:px-2" data-aos="fade-right">
+        <div className="mx-auto w-full px-5 md:max-w-7xl py-4 md:px-2" data-aos="fade-right">
           <div className="grid grid-cols-2 md:grid-cols-3 gap-2 mt-4">
-            {!!STATIC_PRODUCTS && STATIC_PRODUCTS.map((lamp: any, index) => (
-              <GalleryItem key={index} {...lamp} />
-            ))}
+            {!!visibleProducts &&
+              visibleProducts.map((lamp: any, index) => (
+                <GalleryItem key={index} {...lamp} />
+              ))}
           </div>
         </div>
 
@@ -214,7 +214,7 @@ export default function Home() {
               </h3>
             </div>
 
-            <Link href="/about">
+            <Link href="/about" className="mt-8 lg:mt-0">
               <ButtonUI text="Ver Más Productos" />
             </Link>
           </div>
@@ -286,16 +286,16 @@ export default function Home() {
 
       <div className="w-full py-20 bg-gray-200">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 w-full">
-          {SERVICES_IMAGES.slice(1).map((category) => (
+          {HOME_CATEGORIES_IMAGES.map((category) => (
             <Link href="/shop" key={category.title}>
               <div key={category.title} className="relative">
                 <img
                   src={category.image}
                   alt={category.title}
-                  className="h-96 w-full rounded object-cover"
+                  className="h-80 w-full rounded object-cover"
                 />
                 <div className="absolute inset-0 bg-opacity-40 flex items-center justify-center">
-                  <div className="bg-white py-3 px-10 rounded-lg">
+                  <div className="bg-white py-3 px-10 rounded-lg shadow-sm">
                     <h2 className="text-lg font-medium text-center text-gray-900">
                       {category.title}
                     </h2>

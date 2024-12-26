@@ -1,4 +1,4 @@
-export const HERO = "/assets/home/hero.png";
+export const HERO = "/assets/home/hero.jpeg";
 export const CAMP = "/assets/home/camp.png";
 export const HOME_01 = "/assets/home/home-01.png";
 export const HOME_02 = "/assets/home/home-02.png";
@@ -21,20 +21,20 @@ export const COMPANIES = [
 export const STATIC_PRODUCTS = [
   {
     id: 1,
-    src: '/assets/shop/01.webp',
-    title: 'Tractor Hanomag INV2',
+    src: '/assets/shop/01.png',
+    title: 'Pala Frontal R45C II',
     category: 'Vial y Agro',
   },
   {
     id: 2,
-    src: '/assets/shop/02.webp',
-    title: 'Sembradora 99000',
-    category: 'Siembra y Laboreo',
+    src: '/assets/shop/02.png',
+    title: 'Autoelevador ME25 45T',
+    category: 'Autoelevadores',
   },
   {
     id: 3,
     src: '/assets/shop/03.webp',
-    title: 'Pala Forrajera M45HD II',
+    title: 'Tractor Hanomag 500/4',
     category: 'Vial y Agro',
   },
 ];

@@ -107,7 +107,7 @@ const About = () => {
 
         <div className="max-w-5xl mx-auto my-10 px-4 lg:px-0" data-aos="fade-up">
           <h2 className="font-yellowtail text-red-500 text-2xl font-medium text-center mb-1">
-            Áreas
+            Acerca de Nosotros
           </h2>
           <h3 className="text-3xl font-semibold text-center text-gray-900">
             Nuestras Especialidades en el Campo
@@ -121,45 +121,17 @@ const About = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-5" data-aos="fade-up">
             {SERVICES_IMAGES.slice(1).map((category, index) => (
               <div key={index} className="flex flex-col bg-gray-200 rounded-b-2xl" data-aos="zoom-in">
-                <div className="w-full h-80 overflow-hidden rounded-t-2xl">
+                <div className="w-full h-60 overflow-hidden rounded-t-2xl justify-center">
                   <img
                     src={category.image}
                     alt={category.title}
                     className="w-full h-full object-cover transition-transform duration-300 transform hover:scale-105"
                   />
                 </div>
-                <h3 className="font-bold text-gray-900 mt-4 text-2xl px-4">{category.title}</h3>
-                <p className="text-red-700 font-yellowtail text-xl px-4 pb-4">{category.subtitle}</p>
+                <h3 className="font-bold text-gray-900 mt-4 text-2xl px-4 text-center">{category.title}</h3>
+                <p className="text-red-700 font-yellowtail text-xl px-4 pb-4 text-center">{category.subtitle}</p>
               </div>
             ))}
-          </div>
-        </div>
-
-        <div className="bg-gray-200 py-10">
-          <div className="max-w-5xl mx-auto px-4 lg:px-0">
-            <h2 className="font-yellowtail text-red-500 text-2xl font-medium text-center mb-1">
-              Acerca de Nosotros
-            </h2>
-            <h3 className="text-3xl font-semibold text-center text-gray-900">
-              Lo Que Ofrecemos Para Su Empresa
-            </h3>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-5">
-              {SERVICES_IMAGES.map((service, index) => (
-                <div key={index} className="flex flex-col rounded-b-2xl" data-aos="zoom-up">
-                  <div className="w-full overflow-hidden rounded-[1.5rem]">
-                    <img
-                      src={service.image}
-                      alt={service.title}
-                      className="w-full h-60 object-cover transition-transform duration-300 transform hover:scale-105"
-                    />
-                  </div>
-                  <h3 className="font-medium text-gray-900 mt-2 text-center text-xl px-4">
-                    {service.title}
-                  </h3>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </div>

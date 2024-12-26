@@ -1,20 +1,38 @@
 "use client";
 
-import React from 'react'
-import Link from 'next/link'
-import HeaderBackground from '@/components/header-background/HeaderBackground';
-import TextInput from '@/components/text-input/TextInput';
-import { CONTACT, CONTACT_BACKGROUND } from '@/utils/assets/contact/contact';
-import { EMAIL, FACEBOOK, INSTAGRAM, LOCATION, TELEPHONE } from '@/utils/assets/icons/icons';
-import { BRICCHI_HNOS_BACKGROUND } from '@/utils/assets/images';
-import { FACEBOOK_URL, INSTAGRAM_URL } from '@/utils/constants/constants';
+import React, { useState } from "react";
+import Link from "next/link";
+import HeaderBackground from "@/components/header-background/HeaderBackground";
+import TextInput from "@/components/text-input/TextInput";
+import { CONTACT, CONTACT_BACKGROUND } from "@/utils/assets/contact/contact";
+import { EMAIL, FACEBOOK, INSTAGRAM, LOCATION, TELEPHONE } from "@/utils/assets/icons/icons";
+import { BRICCHI_HNOS_BACKGROUND } from "@/utils/assets/images";
+import { FACEBOOK_URL, INSTAGRAM_URL, SALES_PHONE_NUMBER } from "@/utils/constants/constants";
 
 const ContactPage = () => {
+  const [formData, setFormData] = useState({
+    fullName: "",
+    email: "",
+    company: "",
+    subject: "",
+    message: "",
+  });
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
   const handleClickToWhatsApp = (phoneNumber: number) => {
-    window.open(
-      `https://wa.me/${phoneNumber}`,
-      "_blank"
-    );
+    const { fullName, email, company, subject, message } = formData;
+    const whatsappMessage = `Hola! Soy ${fullName}.
+Email: ${email}
+Empresa: ${company}
+Asunto: ${subject}
+Mensaje: ${message}`;
+
+    const encodedMessage = encodeURIComponent(whatsappMessage);
+    window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, "_blank");
   };
 
   return (
@@ -116,28 +134,62 @@ const ContactPage = () => {
       </div>
 
 
-      <div className="max-w-5xl mx-auto mt-16 px-4 md:px-0">
+      <div className="max-w-5xl mx-auto mt-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <TextInput as="input" label="Nombre Completo" placeholder="Su nombre completo" />
-          <TextInput as="input" label="Email" placeholder="ejemplo@suemail.com" />
-          <TextInput as="input" label="Empresa" placeholder="Nombre de tu empresa aquí" />
-          <TextInput as="input" label="Asunto" placeholder="¿Cómo podemos ayudarte?" />
-        </div>
-        <div className='py-8'>
           <TextInput
-            as="textarea"
-            label="Mensaje"
-            placeholder="¡Hola! Me gustaría preguntar acerca de"
+            as="input"
+            name="fullName"
+            label="Nombre Completo"
+            placeholder="Su nombre completo"
+            value={formData.fullName}
+            onChange={handleInputChange}
+          />
+          <TextInput
+            as="input"
+            name="email"
+            label="Email"
+            placeholder="ejemplo@suemail.com"
+            value={formData.email}
+            onChange={handleInputChange}
+          />
+          <TextInput
+            as="input"
+            name="company"
+            label="Empresa"
+            placeholder="Nombre de tu empresa aquí"
+            value={formData.company}
+            onChange={handleInputChange}
+          />
+          <TextInput
+            as="input"
+            name="subject"
+            label="Asunto"
+            placeholder="¿Cómo podemos ayudarte?"
+            value={formData.subject}
+            onChange={handleInputChange}
           />
         </div>
-        <div className='flex w-full justify-end'>
-          <button className="bg-green-900 w-full md:w-auto py-4 px-8 rounded-lg text-white font-medium">
-            Enviar Mensaje
+        <div className="py-8">
+          <TextInput
+            as="textarea"
+            name="message"
+            label="Mensaje"
+            placeholder="¡Hola! Me gustaría preguntar acerca de"
+            value={formData.message}
+            onChange={handleInputChange}
+          />
+        </div>
+        <div className="flex w-full justify-end">
+          <button
+            className="bg-green-900 w-full md:w-auto py-4 px-8 rounded-lg text-white font-medium"
+            onClick={() => handleClickToWhatsApp(Number(SALES_PHONE_NUMBER))}
+          >
+            Enviar Mensaje a WhatsApp
           </button>
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
 export default ContactPage;

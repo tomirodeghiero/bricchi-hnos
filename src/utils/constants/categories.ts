@@ -75,12 +75,6 @@ export const CATEGORIES = [
         ]
       },
       {
-        "name": "Excavadoras",
-        "brands": [
-          "Michigan"
-        ]
-      },
-      {
         "name": "Elevadores",
         "brands": [
           "Hanomag"

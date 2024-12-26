@@ -13,8 +13,8 @@ const Categories = () => {
         title="Descúbrenos"
         subtitle="Inicio - Categorías"
       />
-      <div className="max-w-5xl mx-auto mt-8 px-5 md:px-0" data-os="fade-up">
-        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 md:gap-4">
+      <div className="max-w-7xl mx-auto mt-8 px-5 md:px-0" data-os="fade-up">
+        <div className="grid grid-cols-2 sm:grid-cols-2 gap-4 lg:grid-cols-3 md:gap-4">
           {CATEGORIES_IMAGES.map((category, index) => (
             <Link href="/shop" key={index}>
               <div key={index} className="flex flex-col px-2 mt-5 md:mt-0 bg-gray-200 py-2 border border-gray-300 rounded-lg shadow-sm">
@@ -23,7 +23,7 @@ const Categories = () => {
                   <img
                     src={category.image}
                     alt={category.title}
-                    className="w-full h-full object-contain transition-transform duration-300 transform hover:scale-105 rounded-lg md:rounded-2xl"
+                    className="w-full h-full object-contain md:object-cover transition-transform duration-300 transform hover:scale-105 rounded-lg md:rounded-2xl"
                   />
                 </div>
                 <h3 className="font-bold text-gray-900 mt-4 text-xl">
