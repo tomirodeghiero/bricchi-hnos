@@ -55,13 +55,22 @@ Mensaje: ${message}`;
             </p>
 
             <div className="flex-col mt-6 space-y-4 md:w-3/4">
-              <Link href="mailto:infod.pastel@gmail.com" className="flex p-2 items-center rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-200 border border-gray-300">
+              <Link href="mailto:bricchihnos@gmail.com" className="flex p-2 items-center rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-200 border border-gray-300">
                 <div className="flex items-center justify-center rounded-lg">
                   <img src={EMAIL} alt="E-mail" className="h-16" />
                 </div>
                 <div className="ml-4">
-                  <p className="text-lg font-semibold text-gray-900">Mensaje</p>
-                  <p className="text-gray-800">ventas@bricchihnos.com</p>
+                  <p className="text-lg font-semibold text-gray-900">Correo – Área de Ventas</p>
+                  <p className="text-gray-800">alejandropirchio@bricchihnos.com</p>
+                </div>
+              </Link>
+              <Link href="mailto:bricchihnos@gmail.com" className="flex p-2 items-center rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-200 border border-gray-300">
+                <div className="flex items-center justify-center rounded-lg">
+                  <img src={EMAIL} alt="E-mail" className="h-16" />
+                </div>
+                <div className="ml-4">
+                  <p className="text-lg font-semibold text-gray-900">Correo – Área de Ventas</p>
+                  <p className="text-gray-800">juan@bricchihnos.com</p>
                 </div>
               </Link>
               <div onClick={() => handleClickToWhatsApp(5493584854418)} className="cursor-pointer flex p-2 items-center rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-200 border border-gray-300">
