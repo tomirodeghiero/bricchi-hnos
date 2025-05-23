@@ -61,7 +61,7 @@ Mensaje: ${message}`;
                 </div>
                 <div className="ml-4">
                   <p className="text-lg font-semibold text-gray-900">Mensaje</p>
-                  <p className="text-gray-800">ventas@briccihnos.com</p>
+                  <p className="text-gray-800">ventas@bricchihnos.com</p>
                 </div>
               </Link>
               <div onClick={() => handleClickToWhatsApp(5493584854418)} className="cursor-pointer flex p-2 items-center rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-200 border border-gray-300">

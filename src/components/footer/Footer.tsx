@@ -13,7 +13,7 @@ const Footer = () => {
           <div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left border-b border-gray-400 py-8">
             {/* Logo and Description Section */}
             <div className="flex flex-col items-center order-first md:order-none md:border-l md:border-r border-gray-400 md:mx-8 px-8 md:col-span-2">
-              <img src={BRICCHI_HNOS_LOGOTYPE} alt="Bricci Hnos" className="mb-4 h-8" />
+              <img src={BRICCHI_HNOS_LOGOTYPE} alt="Bricchi Hnos" className="mb-4 h-8" />
               <p className="text-gray-800 mb-4 text-[0.9rem] text-center font-open-sans">
                 Maquinaria agrícola de alta calidad para mejorar la eficiencia y productividad de tu campo. Proporcionamos soluciones innovadoras y servicio de excelencia.
               </p>
@@ -31,7 +31,7 @@ const Footer = () => {
             <div className="mx-auto gap-14">
               <div className="space-y-4 text-gray-800 font-open-sans text-[0.9rem]">
                 <h5 className="text-gray-900 font-bold text-xl mb-4">Contáctanos</h5>
-                <p className="text-gray-800 mb-1 text-[0.9rem]"><strong>Email: <span className="font-normal mb-5 text-[0.9rem]">ventas@briccihnos.com</span></strong></p>
+                <p className="text-gray-800 mb-1 text-[0.9rem]"><strong>Email: <span className="font-normal mb-5 text-[0.9rem]">ventas@bricchihnos.com</span></strong></p>
                 <p className="text-gray-800 mb-1 text-[0.9rem]"><strong>Teléfono: <span className="font-normal mb-5 text-[0.9rem]">+54 9 3584854418</span></strong></p>
                 <p className="text-gray-800 mb-1 text-[0.9rem]"><strong>Dirección: <span className="font-normal mb-5 text-[0.9rem]">Ruta A005 km 1.2, Río Cuarto</span></strong></p>
               </div>
@@ -70,7 +70,7 @@ const Footer = () => {
             <div className="flex flex-col items-center md:items-end md:col-span-1">
               <h5 className="text-gray-900 font-bold text-xl mb-4">Contáctanos</h5>
               <p className="text-gray-800 mb-1 text-[0.9rem]"><strong>Email</strong></p>
-              <p className="text-gray-800 mb-5 text-[0.9rem]">ventas@briccihnos.com</p>
+              <p className="text-gray-800 mb-5 text-[0.9rem]">ventas@bricchihnos.com</p>
               <p className="text-gray-800 mb-1 text-[0.9rem]"><strong>Teléfono</strong></p>
               <p className="text-gray-800 mb-5 text-[0.9rem]">+54 9 3584854418</p>
               <p className="text-gray-800 mb-1 text-[0.9rem]"><strong>Dirección</strong></p>
@@ -79,7 +79,7 @@ const Footer = () => {
             </div>
             {/* Logo and Description Section */}
             <div className="flex flex-col items-center md:border-l md:border-r border-gray-400 md:mx-8 px-8 md:col-span-2">
-              <img src={BRICCHI_HNOS_LOGOTYPE} alt="Bricci Hnos" className="mb-4 h-8" />
+              <img src={BRICCHI_HNOS_LOGOTYPE} alt="Bricchi Hnos" className="mb-4 h-8" />
               <p className="text-gray-800 mb-4 text-[0.9rem] text-center font-open-sans">Maquinaria agrícola de alta calidad para mejorar la eficiencia y productividad de tu campo. Proporcionamos soluciones innovadoras y servicio de excelencia.</p>
               <div className="flex space-x-4">
                 <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer">
